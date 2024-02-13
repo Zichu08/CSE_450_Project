@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//
 namespace scene_1 {
     public class player_2_controller : MonoBehaviour {
         // Outlet
