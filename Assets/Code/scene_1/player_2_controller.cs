@@ -12,6 +12,9 @@ namespace scene_1 {
         // State Tracking
         public int jumpsLeft;
 
+        // State for keping track of player direction
+        bool facingRight = true;
+
         // Methods
         void Start()
         {
@@ -25,12 +28,22 @@ namespace scene_1 {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 _rigidbody2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
+
+                if (facingRight)
+                { //Flip player direction
+                    FlipSpriteDirection();
+                }
             }
 
             // Move Player Right
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
+
+                if (!facingRight)
+                { //Flip player direction
+                    FlipSpriteDirection();
+                }
             }
             
             // Jump
@@ -42,7 +55,19 @@ namespace scene_1 {
                     _rigidbody2D.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
                 }
             }
+
+            //Punch
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                print("Player 2 Shoot");
+                /**
+                 * Figure out shoot mechanics
+                 * Need way to switch to shoot player model (Shoot bullet)
+                 * Need a way to damage the player in front of the player punching (within a certain range)
+                 */
+            }
         }
+
         private void OnCollisionStay2D(Collision2D other)
         {
             // Check that we collided with Ground
@@ -65,6 +90,15 @@ namespace scene_1 {
                     }
                 }
             }
+        }
+
+        private void FlipSpriteDirection()
+        { //Flips the direction the sprite is facing
+            Vector3 currentScale = gameObject.transform.localScale;
+            currentScale.x *= -1;
+            gameObject.transform.localScale = currentScale;
+            facingRight = !facingRight;
+            print("Player is facing right: " + facingRight);
         }
     }
 }
