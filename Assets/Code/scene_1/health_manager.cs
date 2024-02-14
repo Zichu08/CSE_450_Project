@@ -8,6 +8,9 @@ public class health_manager
     private int health;
     bool alive;
 
+    /*
+     * Constructor... called on object creation
+     */
     public health_manager()
     {
         health = 100;

@@ -14,11 +14,18 @@ namespace scene_1 {
         // State for keping track of player direction
         bool facingRight = true;
 
+        // Reference to player health Object
+        health_manager playerHealth;
 
         // Methods
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            playerHealth = new health_manager(); // Create the player health manager
+
+            print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
+            print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
+
         }
 
         // Update is called once per frame
@@ -65,6 +72,22 @@ namespace scene_1 {
                  * Need a way to damage the player in front of the player shooting (within a certain range)
                  */
             }
+
+            //Health system testing
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                playerHealth.RemoveHealth(10);
+                print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
+                print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
+            }
+            //Health system testing
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                playerHealth.AddHealth(10);
+                print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
+                print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
+            }
+
         }
         private void OnCollisionStay2D(Collision2D other)
         {
