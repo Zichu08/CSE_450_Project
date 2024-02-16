@@ -15,16 +15,20 @@ namespace scene_1 {
         bool facingRight = true;
 
         // Reference to player health Object
-        health_manager playerHealth;
+        //health_manager playerHealth;
+
+        //Fun fire point
+        public Transform firePoint;
+        public GameObject bulletPrefab;
 
         // Methods
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            playerHealth = new health_manager(); // Create the player health manager
+            //playerHealth = new health_manager(); // Create the player health manager
 
-            print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
-            print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
+            //print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
+            //print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
 
         }
 
@@ -62,33 +66,26 @@ namespace scene_1 {
                 }
             }
 
-            //Punch
-            if (Input.GetKeyDown(KeyCode.F))
+            //Shoot
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 print("Player 1 Shoot");
-                /**
-                 * Figure out shoot mechanics
-                 * Need way to switch to shoot player model (Shoot Bullet)
-                 * Need a way to damage the player in front of the player shooting (within a certain range)
-                 */
-            }
+                GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
-            //Health system testing
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                playerHealth.RemoveHealth(10);
-                print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
-                print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
-            }
-            //Health system testing
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                playerHealth.AddHealth(10);
-                print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
-                print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
+                //RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
+                //if (hit) //If we hit the enemy
+                //{
+                //    Debug.Log("Hit " + hit.collider.gameObject);
+                //    player_2_controller enemy = hit.collider.gameObject.GetComponent<player_2_controller>();
+                //    if (enemy != null)
+                //    {
+                //        print("Make player two take damage");
+                //    }
+                //}
             }
 
         }
+
         private void OnCollisionStay2D(Collision2D other)
         {
             // Check that we collided with Ground
@@ -120,5 +117,6 @@ namespace scene_1 {
             facingRight = !facingRight;
             print("Player is facing right: " + facingRight);
         }
+
     }
 }
