@@ -15,11 +15,20 @@ namespace scene_1 {
         bool facingRight = true;
 
         // Reference to player health Object
+
+        health_manager playerHealth;
+        
+        public void DisableMovement()
+        {
+            this.enabled = false; // Disables the script and, consequently, player movement and actions.
+        }
+
         //health_manager playerHealth;
 
         //Fun fire point
         public Transform firePoint;
         public GameObject bulletPrefab;
+
 
         // Methods
         void Start()
@@ -35,36 +44,71 @@ namespace scene_1 {
         // Update is called once per frame
         void Update()
         {
-            // Move Player Left 
-            if (Input.GetKey(KeyCode.A))
+            if (this.enabled != false)
             {
-                _rigidbody2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
-
-                if (facingRight){ //Flip player direction
-                    FlipSpriteDirection();
-                }
-                
-            }
-
-            // Move Player Right
-            if (Input.GetKey(KeyCode.D))
-            {
-                _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
-
-                if (!facingRight){ //Flip player direction
-                    FlipSpriteDirection();
-                }
-            }
-            
-            // Jump
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                if (jumpsLeft > 0)
+                // Move Player Left 
+                if (Input.GetKey(KeyCode.A))
                 {
-                    jumpsLeft--;
-                    _rigidbody2D.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
+                    _rigidbody2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
+
+                    if (facingRight)
+                    {
+                        //Flip player direction
+                        FlipSpriteDirection();
+                    }
+
                 }
-            }
+
+                // Move Player Right
+                if (Input.GetKey(KeyCode.D))
+                {
+                    _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
+
+                    if (!facingRight)
+                    {
+                        //Flip player direction
+                        FlipSpriteDirection();
+                    }
+                }
+
+                // Jump
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    if (jumpsLeft > 0)
+                    {
+                        jumpsLeft--;
+                        _rigidbody2D.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
+                    }
+                }
+
+                //Punch
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    print("Player 1 Shoot");
+                    /**
+                     * Figure out shoot mechanics
+                     * Need way to switch to shoot player model (Shoot Bullet)
+                     * Need a way to damage the player in front of the player shooting (within a certain range)
+                     */
+                }
+
+
+                //Health system testing
+                if (Input.GetKeyDown(KeyCode.K))
+                {
+                    playerHealth.RemoveHealth(10);
+                    print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
+                    print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
+                }
+
+                //Health system testing
+                if (Input.GetKeyDown(KeyCode.L))
+                {
+                    playerHealth.AddHealth(10);
+                    print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
+                    print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
+                }
+
 
             //Shoot
             if (Input.GetKeyDown(KeyCode.Space))
@@ -82,6 +126,7 @@ namespace scene_1 {
                 //        print("Make player two take damage");
                 //    }
                 //}
+
             }
 
         }
