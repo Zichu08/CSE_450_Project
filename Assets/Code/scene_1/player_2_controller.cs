@@ -15,10 +15,15 @@ namespace scene_1 {
         // State for keping track of player direction
         bool facingRight = true;
 
+        //health_manager playerHealth;
+
+
         // Methods
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            //playerHealth = new health_manager(); // Create the player health manager
+            //Debug.Log("Player 2 Health: " + playerHealth.GetHealth());
         }
 
         // Update is called once per frame
@@ -90,6 +95,8 @@ namespace scene_1 {
                     }
                 }
             }
+
+
         }
 
         private void FlipSpriteDirection()
