@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace scene_1 {
-    public class player_1_controller : MonoBehaviour {
+namespace scene_1
+{
+    public class player_1_controller : MonoBehaviour
+    {
         // Outlet
         Rigidbody2D _rigidbody2D;
 
@@ -17,7 +19,7 @@ namespace scene_1 {
         // Reference to player health Object
 
         health_manager playerHealth;
-        
+
         public void DisableMovement()
         {
             this.enabled = false; // Disables the script and, consequently, player movement and actions.
@@ -110,58 +112,61 @@ namespace scene_1 {
                 }
 
 
-            //Shoot
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                print("Player 1 Shoot");
-                GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+                //Shoot
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    print("Player 1 Shoot");
+                    GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
-                //RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
-                //if (hit) //If we hit the enemy
-                //{
-                //    Debug.Log("Hit " + hit.collider.gameObject);
-                //    player_2_controller enemy = hit.collider.gameObject.GetComponent<player_2_controller>();
-                //    if (enemy != null)
-                //    {
-                //        print("Make player two take damage");
-                //    }
-                //}
+                    //RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
+                    //if (hit) //If we hit the enemy
+                    //{
+                    //    Debug.Log("Hit " + hit.collider.gameObject);
+                    //    player_2_controller enemy = hit.collider.gameObject.GetComponent<player_2_controller>();
+                    //    if (enemy != null)
+                    //    {
+                    //        print("Make player two take damage");
+                    //    }
+                    //}
+
+                }
 
             }
 
-        }
-
-        private void OnCollisionStay2D(Collision2D other)
-        {
-            // Check that we collided with Ground
-            if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            void OnCollisionStay2D(Collision2D other)
             {
-                // Check what is directly below our character's feet
-                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 0.7f);
-                // Debug.DrawRay(transform.position, Vector2.down * 0.7f); // Visualize Raycast
-
-                // We might have multiple things below out character's feet
-                for (int i = 0; i < hits.Length; i++)
+                // Check that we collided with Ground
+                if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
                 {
-                    RaycastHit2D hit = hits[i];
+                    // Check what is directly below our character's feet
+                    RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 0.7f);
+                    // Debug.DrawRay(transform.position, Vector2.down * 0.7f); // Visualize Raycast
 
-                    // Check that we collided with ground below our feet
-                    if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                    // We might have multiple things below out character's feet
+                    for (int i = 0; i < hits.Length; i++)
                     {
-                        // Reset jump count
-                        jumpsLeft = 2;
+                        RaycastHit2D hit = hits[i];
+
+                        // Check that we collided with ground below our feet
+                        if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                        {
+                            // Reset jump count
+                            jumpsLeft = 2;
+                        }
                     }
                 }
             }
-        }
 
-        private void FlipSpriteDirection(){ //Flips the direction the sprite is facing
-            Vector3 currentScale = gameObject.transform.localScale;
-            currentScale.x *= -1;
-            gameObject.transform.localScale = currentScale;
-            facingRight = !facingRight;
-            print("Player is facing right: " + facingRight);
-        }
+            void FlipSpriteDirection()
+            {
+                //Flips the direction the sprite is facing
+                Vector3 currentScale = gameObject.transform.localScale;
+                currentScale.x *= -1;
+                gameObject.transform.localScale = currentScale;
+                facingRight = !facingRight;
+                print("Player is facing right: " + facingRight);
+            }
 
+        }
     }
 }

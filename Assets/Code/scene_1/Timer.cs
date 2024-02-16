@@ -8,13 +8,14 @@ namespace scene_1
     public class Timer : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI timerText;
-        [SerializeField] float remainingTime;
+        [SerializeField] private float remainingTime;
         [SerializeField] private player_1_controller player1Controller;
         [SerializeField] private player_2_controller player2Controller;
         [SerializeField] private GameObject gameOverText; 
         
         private void Start()
         {
+            remainingTime = 150;
             gameOverText.SetActive(false); // Ensure game over text is hidden at start
         }
 
