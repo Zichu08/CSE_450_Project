@@ -15,6 +15,7 @@ namespace scene_1 {
         bool facingRight = true;
 
         // Reference to player health Object
+
         health_manager playerHealth;
         
         public void DisableMovement()
@@ -22,14 +23,21 @@ namespace scene_1 {
             this.enabled = false; // Disables the script and, consequently, player movement and actions.
         }
 
+        //health_manager playerHealth;
+
+        //Fun fire point
+        public Transform firePoint;
+        public GameObject bulletPrefab;
+
+
         // Methods
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            playerHealth = new health_manager(); // Create the player health manager
+            //playerHealth = new health_manager(); // Create the player health manager
 
-            print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
-            print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
+            //print(String.Format("Player is alive: {0}\n", playerHealth.GetAlive()));
+            //print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
 
         }
 
@@ -84,6 +92,7 @@ namespace scene_1 {
                      */
                 }
 
+
                 //Health system testing
                 if (Input.GetKeyDown(KeyCode.K))
                 {
@@ -100,9 +109,28 @@ namespace scene_1 {
                     print(String.Format("Player Health is: {0}\n", playerHealth.GetHealth()));
                 }
 
+
+            //Shoot
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                print("Player 1 Shoot");
+                GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+                //RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
+                //if (hit) //If we hit the enemy
+                //{
+                //    Debug.Log("Hit " + hit.collider.gameObject);
+                //    player_2_controller enemy = hit.collider.gameObject.GetComponent<player_2_controller>();
+                //    if (enemy != null)
+                //    {
+                //        print("Make player two take damage");
+                //    }
+                //}
+
             }
 
         }
+
         private void OnCollisionStay2D(Collision2D other)
         {
             // Check that we collided with Ground
@@ -134,5 +162,6 @@ namespace scene_1 {
             facingRight = !facingRight;
             print("Player is facing right: " + facingRight);
         }
+
     }
 }

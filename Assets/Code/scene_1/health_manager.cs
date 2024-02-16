@@ -2,20 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class health_manager
+public class health_manager : MonoBehaviour
 {
     // Data members
-    private int health;
-    bool alive;
-
-    /*
-     * Constructor... called on object creation
-     */
-    public health_manager()
-    {
-        health = 100;
-        alive = true;
-    }
+    public int health = 100;
+    public bool alive = true;
 
     /*
      * Set health points to a specified number
