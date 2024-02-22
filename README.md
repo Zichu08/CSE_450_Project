@@ -5,4 +5,4 @@
  - [ ] Game end conditions
  - [ ] Boundaries
  - [ ] Sprite animation
- - [ ] Polish shooting mechanic
+ - [x] Polish shooting mechanic
