@@ -8,8 +8,7 @@ public class Bullet : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        // TODO: Make bullet direction match the player's direction
+    {   // Bullet direction is handled in player class
         transform.position += transform.right * Time.deltaTime * speed;
     }
 

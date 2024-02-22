@@ -76,6 +76,7 @@ namespace scene_1
                 // Jump
                 if (Input.GetKeyDown(KeyCode.W))
                 {
+                    Debug.Log("Player 1 jump");
                     if (jumpsLeft > 0)
                     {
                         jumpsLeft--;
@@ -117,6 +118,13 @@ namespace scene_1
                 {
                     print("Player 1 Shoot");
                     GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+                    if (!facingRight) // If we are facing to the left, we want to rotate the bullet 180 degrees
+                    {
+                        bulletInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
+                    }
+           
+                   
+                    
 
                     //RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
                     //if (hit) //If we hit the enemy
