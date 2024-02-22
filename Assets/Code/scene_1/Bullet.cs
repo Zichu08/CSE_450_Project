@@ -14,12 +14,12 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy p2 = collision.gameObject.GetComponent<Enemy>();
-        if(p2 != null)
+        Enemy player = collision.gameObject.GetComponent<Enemy>();
+        if(player != null)
         {
-            Debug.Log("Player 2 hit");
-            p2.GetComponent<health_manager>().RemoveHealth(20); // Remove 20 health from player 2
-            Debug.Log("Player 2 health: " + p2.GetComponent<health_manager>().GetHealth());
+            Debug.Log("Player hit");
+            player.GetComponent<health_manager>().RemoveHealth(20); // Remove 20 health from player 2
+            Debug.Log("Player health: " + player.GetComponent<health_manager>().GetHealth());
         }
         gameObject.SetActive(false); // Make bullet disappear on impact with enemy
         Destroy(gameObject, 2.0f);
