@@ -14,21 +14,20 @@ namespace scene_1 {
 
         // State for keping track of player direction
         bool facingRight = true;
-        
+
+        //Gun fire point
+        public Transform firePoint;
+        public GameObject bulletPrefab;
+
         public void DisableMovement()
         {
             this.enabled = false; // Disables the script and, consequently, player movement and actions.
         }
 
-        //health_manager playerHealth;
-
-
         // Methods
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            //playerHealth = new health_manager(); // Create the player health manager
-            //Debug.Log("Player 2 Health: " + playerHealth.GetHealth());
         }
 
         // Update is called once per frame
@@ -73,12 +72,18 @@ namespace scene_1 {
                 //Punch
                 if (Input.GetKeyDown(KeyCode.L))
                 {
+                    print("Player 2 Punch");
+                }
+
+                //Shoot
+                if (Input.GetKeyDown(KeyCode.K))
+                {
                     print("Player 2 Shoot");
-                    /**
-                     * Figure out shoot mechanics
-                     * Need way to switch to shoot player model (Shoot bullet)
-                     * Need a way to damage the player in front of the player punching (within a certain range)
-                     */
+                    GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+                    if (!facingRight) // If we are facing to the left, we want to rotate the bullet 180 degrees
+                    {
+                        bulletInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
+                    }
                 }
             }
         }
