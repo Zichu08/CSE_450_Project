@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 public class health_manager : MonoBehaviour
 {
     // Data members
-    public int health = 200;
+    public int health = 199;
     public bool alive = true;
     public health_bar_controller health_bar;
 
@@ -16,7 +17,15 @@ public class health_manager : MonoBehaviour
     public void SetHealth(int healthPoints)
     {
         health = healthPoints;
+        health_bar.set_max_health(200);
     }
+
+    private void Start()
+    {
+        
+        SetHealth(200);
+    }
+
 
     /*
      * Add a specified number of health points to a player's health

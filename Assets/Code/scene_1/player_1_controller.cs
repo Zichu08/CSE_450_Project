@@ -30,6 +30,7 @@ namespace scene_1
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            Console.Write(GameObject.Find("player_1").GetComponent<health_manager>().health);
         }
 
         // Update is called once per frame
