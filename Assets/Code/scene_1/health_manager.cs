@@ -7,6 +7,7 @@ public class health_manager : MonoBehaviour
     // Data members
     public int health = 100;
     public bool alive = true;
+    public health_bar_controller health_bar;
 
     /*
      * Set health points to a specified number
@@ -21,9 +22,7 @@ public class health_manager : MonoBehaviour
      * Add a specified number of health points to a player's health
      * Parameters - healthPoints: A single unit of health
      */
-    public void AddHealth(int healthPoints)
-    {
-
+    public void AddHealth(int healthPoints) {
         int healthSum = health + healthPoints;
         if (healthSum < 100)
         {
@@ -48,13 +47,14 @@ public class health_manager : MonoBehaviour
     public void RemoveHealth(int healthPoints)
     {
         int healthSum = health - healthPoints;
-        if (healthSum > 0)
+        if (healthSum > -1)
         {
             health = healthSum;
+            health_bar.set_health(health);
         }
         else
         {
-            health = 0;
+            health = -1;
             alive = false;
         }
     }

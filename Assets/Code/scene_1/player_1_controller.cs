@@ -65,7 +65,6 @@ namespace scene_1
                 // Jump
                 if (Input.GetKeyDown(KeyCode.W))
                 {
-                    Debug.Log("Player 1 jump");
                     if (jumpsLeft > 0)
                     {
                         jumpsLeft--;
@@ -76,13 +75,11 @@ namespace scene_1
                 //Punch
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    print("Player 1 Punch");
                 }
 
                 //Shoot
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    print("Player 1 Shoot");
                     GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
                     if (!facingRight) // If we are facing to the left, we want to rotate the bullet 180 degrees
                     {
@@ -92,20 +89,30 @@ namespace scene_1
 
             }
 
-            void OnCollisionStay2D(Collision2D other)
+           
+
+            void FlipSpriteDirection()
             {
+                //Flips the direction the sprite is facing
+                Vector3 currentScale = gameObject.transform.localScale;
+                currentScale.x *= -1;
+                gameObject.transform.localScale = currentScale;
+                facingRight = !facingRight;
+            }
+            
+        }
+        private void OnCollisionStay2D(Collision2D other) {
                 // Check that we collided with Ground
-                if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
-                {
+                if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
                     // Check what is directly below our character's feet
                     RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 0.7f);
                     // Debug.DrawRay(transform.position, Vector2.down * 0.7f); // Visualize Raycast
-
+        
                     // We might have multiple things below out character's feet
                     for (int i = 0; i < hits.Length; i++)
                     {
                         RaycastHit2D hit = hits[i];
-
+        
                         // Check that we collided with ground below our feet
                         if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                         {
@@ -115,17 +122,6 @@ namespace scene_1
                     }
                 }
             }
-
-            void FlipSpriteDirection()
-            {
-                //Flips the direction the sprite is facing
-                Vector3 currentScale = gameObject.transform.localScale;
-                currentScale.x *= -1;
-                gameObject.transform.localScale = currentScale;
-                facingRight = !facingRight;
-                print("Player is facing right: " + facingRight);
-            }
-
-        }
-    }
+    }  
+    
 }
