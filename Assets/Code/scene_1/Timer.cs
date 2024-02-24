@@ -49,9 +49,9 @@ namespace scene_1
                 timerText.color = Color.red;
                 GameOver();
             }
-
             int p1Health = p1HM.health;
             int p2Health = p2HM.health;
+         
 
             if (p1Health == 0)
             {

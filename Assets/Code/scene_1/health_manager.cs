@@ -5,7 +5,7 @@ using UnityEngine;
 public class health_manager : MonoBehaviour
 {
     // Data members
-    public int health = 100;
+    public int health = 200;
     public bool alive = true;
     public health_bar_controller health_bar;
 
