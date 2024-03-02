@@ -3375,9 +3375,7 @@ MonoBehaviour:
   gameOverText: {fileID: 289821215}
   p1WinsText: {fileID: 37585051}
   p2WinsText: {fileID: 753727836}
-=======
   button: {fileID: 608631139}
->>>>>>> 009f429c3aacacf735e475134787ed9b771401a7
   p1: {fileID: 1888723062}
   p1HM: {fileID: 0}
   p2: {fileID: 1608809555}
