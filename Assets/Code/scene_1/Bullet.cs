@@ -19,11 +19,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy player = collision.gameObject.GetComponent<Enemy>();
+        health_manager player = collision.gameObject.GetComponent<health_manager>();
         
         if(player != null)
         {
-            player.GetComponent<health_manager>().RemoveHealth(20); // Remove 20 health from player 2
+            player.RemoveHealth(20); // Remove 20 health from player 2
             
             
         }
