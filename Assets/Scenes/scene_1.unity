@@ -3959,6 +3959,7 @@ GameObject:
   - component: {fileID: 1608809560}
   - component: {fileID: 1608809561}
   - component: {fileID: 1608809562}
+  - component: {fileID: 1608809563}
   m_Layer: 8
   m_Name: player_2
   m_TagString: Untagged
@@ -4139,6 +4140,27 @@ MonoBehaviour:
   health: 100
   alive: 1
   health_bar: {fileID: 669588076}
+--- !u!95 &1608809563
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608809555}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba373e5d0cb144d9fa5325c81f8ddf8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1614089823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4295,6 +4317,7 @@ GameObject:
   - component: {fileID: 1888723063}
   - component: {fileID: 1888723069}
   - component: {fileID: 1888723068}
+  - component: {fileID: 1888723070}
   m_Layer: 8
   m_Name: player_1
   m_TagString: Untagged
@@ -4422,7 +4445,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 59535545, guid: b41bcc1b8afa14a028eb6d4608704392, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.12, y: 1.28}
@@ -4475,6 +4498,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54c8115205f9447a98304ef073d8740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1888723070
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888723062}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3718a01f9c64544b39d6152cb774483b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1905570553
 PrefabInstance:
   m_ObjectHideFlags: 0
