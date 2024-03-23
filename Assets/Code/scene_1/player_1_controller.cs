@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace scene_1
 {
@@ -19,6 +20,12 @@ namespace scene_1
         //Animator
         Animator animator;
 
+        PlayerControls controller;
+        bool rightDPAD = false;
+        bool leftDPAD = false;
+        bool jumpDPAD = false;
+        bool aButton = false;
+
         public void DisableMovement()
         {
             this.enabled = false; // Disables the script and, consequently, player movement and actions.
@@ -28,6 +35,48 @@ namespace scene_1
         public Transform firePoint;
         public GameObject bulletPrefab;
 
+        private void OnEnable()
+        {
+            controller.Gameplay.Enable();
+        }
+
+        private void OnDisable()
+        {
+            controller.Gameplay.Disable();
+        }
+        void jumpFunc()
+        {
+            if (jumpsLeft > 0)
+            {
+                jumpsLeft--;
+                _rigidbody2D.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
+            }
+        }
+
+        void shootFunc()
+        {
+            GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            if (!facingRight) // If we are facing to the left, we want to rotate the bullet 180 degrees
+            {
+                bulletInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
+            }
+        }
+        private void Awake()
+        {
+            controller = new PlayerControls();
+            controller.Gameplay.Right.performed += ctx => rightDPAD = true;
+            controller.Gameplay.Right.canceled += ctx => rightDPAD = false;
+
+            controller.Gameplay.Left.performed += ctx => leftDPAD = true;
+            controller.Gameplay.Left.canceled += ctx => leftDPAD = false;
+
+            controller.Gameplay.Jump.performed += ctx => jumpFunc();
+            //controller.Gameplay.Jump.canceled += ctx => jumpDPAD = false;
+
+            controller.Gameplay.Shoot.started += ctx => shootFunc();
+            //controller.Gameplay.Shoot.canceled += ctx => aButton = false;
+
+        }
 
         // Methods
         void Start()
@@ -40,10 +89,11 @@ namespace scene_1
         // Update is called once per frame
         void Update()
         {
+            Debug.Log(rightDPAD);
             if (this.enabled != false)
             {
                 // Move Player Left 
-                if (Input.GetKey(KeyCode.A))
+                if (Input.GetKey(KeyCode.A) || leftDPAD)
                 {
                     _rigidbody2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
 
@@ -56,7 +106,7 @@ namespace scene_1
                 }
 
                 // Move Player Right
-                if (Input.GetKey(KeyCode.D))
+                if (Input.GetKey(KeyCode.D) || rightDPAD)
                 {
                     _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
 
@@ -65,16 +115,15 @@ namespace scene_1
                         //Flip player direction
                         FlipSpriteDirection();
                     }
+              
                 }
+
+               
 
                 // Jump
                 if (Input.GetKeyDown(KeyCode.W))
                 {
-                    if (jumpsLeft > 0)
-                    {
-                        jumpsLeft--;
-                        _rigidbody2D.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
-                    }
+                    jumpFunc();
                 }
 
                 //Punch
@@ -83,13 +132,9 @@ namespace scene_1
                 }
 
                 //Shoot
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) || aButton)
                 {
-                    GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-                    if (!facingRight) // If we are facing to the left, we want to rotate the bullet 180 degrees
-                    {
-                        bulletInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
-                    }
+                    shootFunc();
                 }
 
             }
