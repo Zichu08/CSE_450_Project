@@ -110,9 +110,13 @@ namespace scene_1
         private void FixedUpdate()
         {
             float absX = Math.Abs(_rigidbody2D.velocity.x);
+            float absY = Math.Abs(_rigidbody2D.velocity.y);
             animator.SetFloat("p1Speed", absX);
-
-            if (absX != 0)
+            if(absY != 0)
+            {
+                animator.speed = 0;
+            }
+            if (absX != 0 && absY == 0)
             {
                 animator.speed = absX / 3f;
             }
