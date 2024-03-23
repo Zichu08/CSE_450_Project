@@ -70,13 +70,13 @@ namespace scene_1 {
                 }
 
                 //Punch
-                if (Input.GetKeyDown(KeyCode.L))
-                {
-                    print("Player 2 Punch");
-                }
+                // if (Input.GetKeyDown(KeyCode.L))
+                // {
+                //     print("Player 2 Punch");
+                // }
 
                 //Shoot
-                if (Input.GetKeyDown(KeyCode.K))
+                if (Input.GetKeyDown(KeyCode.M))
                 {
                     print("Player 2 Shoot");
                     GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
