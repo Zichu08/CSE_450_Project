@@ -16,6 +16,9 @@ namespace scene_1
         // State for keping track of player direction
         bool facingRight = true;
 
+        //Animator
+        Animator animator;
+
         public void DisableMovement()
         {
             this.enabled = false; // Disables the script and, consequently, player movement and actions.
@@ -31,6 +34,7 @@ namespace scene_1
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
             Console.Write(GameObject.Find("player_1").GetComponent<health_manager>().health);
+            animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -102,6 +106,22 @@ namespace scene_1
             }
             
         }
+
+        private void FixedUpdate()
+        {
+            float absX = Math.Abs(_rigidbody2D.velocity.x);
+            animator.SetFloat("p1Speed", absX);
+
+            if (absX != 0)
+            {
+                animator.speed = absX / 3f;
+            }
+            else
+            {
+                animator.speed = 1f;
+            }
+        }
+
         private void OnCollisionStay2D(Collision2D other) {
                 // Check that we collided with Ground
                 if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {

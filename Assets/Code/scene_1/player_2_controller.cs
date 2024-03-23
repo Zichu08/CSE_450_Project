@@ -15,6 +15,9 @@ namespace scene_1 {
         // State for keping track of player direction
         bool facingRight = true;
 
+        //Animator
+        Animator animator;
+
         //Gun fire point
         public Transform firePoint;
         public GameObject bulletPrefab;
@@ -28,6 +31,7 @@ namespace scene_1 {
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -85,6 +89,21 @@ namespace scene_1 {
                         bulletInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
                     }
                 }
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            float absX = Math.Abs(_rigidbody2D.velocity.x);
+            animator.SetFloat("p2Speed", absX);
+
+            if (absX != 0)
+            {
+                animator.speed = absX / 3f;
+            }
+            else
+            {
+                animator.speed = 1f;
             }
         }
 
