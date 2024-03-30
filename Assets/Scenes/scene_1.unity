@@ -4449,6 +4449,8 @@ MonoBehaviour:
   jumpsLeft: 0
   firePoint: {fileID: 514903577}
   bulletPrefab: {fileID: 4893313951041574570, guid: ef1b96bb4eb4a4064b482c2e1473b807, type: 3}
+  activePowerup: 
+  powerupSprite: {fileID: 0}
 --- !u!114 &1608809561
 MonoBehaviour:
   m_ObjectHideFlags: 0
