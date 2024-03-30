@@ -22,6 +22,15 @@ namespace scene_1 {
         public Transform firePoint;
         public GameObject bulletPrefab;
 
+        //Powerup status
+        public string activePowerup = null;
+        public Sprite powerupSprite;
+
+        public string GetActivePowerup()
+        {
+            return activePowerup;
+        }
+
         public void DisableMovement()
         {
             this.enabled = false; // Disables the script and, consequently, player movement and actions.
@@ -109,6 +118,28 @@ namespace scene_1 {
             {
                 animator.speed = 1f;
             }
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            //TODO: Figure out why bullet sprite is not switching back to normal.. Get rid of error on player collision with bullet
+            if (collision.gameObject.GetComponent<Powerup>())
+            {
+                Destroy(collision.gameObject);
+                activePowerup = collision.gameObject.GetComponent<Powerup>().GetPowerupID();
+                bulletPrefab.GetComponent<SpriteRenderer>().sprite = powerupSprite;
+                StartCoroutine(Powerup(collision.gameObject.GetComponent<Powerup>().GetSecondsActive()));
+                Debug.Log("Powerup complete");
+            }
+        }
+
+        IEnumerator Powerup(float duration)
+        {
+            Sprite prevSprite = bulletPrefab.GetComponent<SpriteRenderer>().sprite;
+            Debug.Log("Player 2 picked up a powerup!");
+            yield return new WaitForSeconds(duration);
+            activePowerup = null;
+            bulletPrefab.GetComponent<SpriteRenderer>().sprite = prevSprite;
         }
 
         private void OnCollisionStay2D(Collision2D other)

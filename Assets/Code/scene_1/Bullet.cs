@@ -20,12 +20,18 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         health_manager player = collision.gameObject.GetComponent<health_manager>();
-        
-        if(player != null)
+        scene_1.player_2_controller playerObject = collision.gameObject.GetComponent<scene_1.player_2_controller>();
+        if (player != null)
         {
-            player.RemoveHealth(20); // Remove 20 health from player 2
-            
-            
+            int damageAmount = 20;
+            // if (playerObject.GetActivePowerup() == "BULLET_POWERUP")
+            // {
+            //     Debug.Log("Bullet powerup damage increase");
+            //     damageAmount = 40;
+            // }
+
+            player.RemoveHealth(damageAmount); // Remove 20 health from player 2
+   
         }
         gameObject.SetActive(false); // Make bullet disappear on impact with enemy
         Destroy(gameObject, 2.0f);

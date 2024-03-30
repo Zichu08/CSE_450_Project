@@ -331,7 +331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 86987493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,6 +556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1888723067}
     m_Modifications:
+    - target: {fileID: 318441359127057211, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 334346415693895216, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -564,9 +568,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 918730581391195986, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244459886541003734, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2434997071978234807, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2923906548505070825, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4892939542567839140, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_Pivot.x
@@ -664,6 +680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: health_bar_canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7899938817720520119, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8226464488516427418, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_RenderMode
       value: 2
@@ -682,7 +702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 203958536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: attack_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +718,7 @@ Transform:
   m_GameObject: {fileID: 203958535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.93, y: 0.58, z: -0.059282415}
+  m_LocalPosition: {x: 0.77, y: 0.47, z: -0.059282415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1501,7 +1521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 514903577}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1947,7 +1967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 318441359127057211, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 334346415693895216, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1959,11 +1979,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 918730581391195986, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1244459886541003734, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2434997071978234807, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -1971,7 +1991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2923906548505070825, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4892939542567839140, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_Pivot.x
@@ -2047,11 +2067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4892939542567839140, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.88
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 4892939542567839140, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.95
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 4892939542567839140, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2071,7 +2091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7899938817720520119, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8226464488516427418, guid: 1b5687ffc3f28d847825c2e7ac455aef, type: 3}
       propertyPath: m_RenderMode
@@ -2828,7 +2848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 925406876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: attack_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2844,7 +2864,7 @@ Transform:
   m_GameObject: {fileID: 925406875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.66, y: 0.38, z: 0}
+  m_LocalPosition: {x: 0.6899996, y: 0.4699998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4271,11 +4291,11 @@ GameObject:
   - component: {fileID: 1608809557}
   - component: {fileID: 1608809556}
   - component: {fileID: 1608809560}
+  - component: {fileID: 1608809564}
   - component: {fileID: 1608809561}
   - component: {fileID: 1608809562}
   - component: {fileID: 1608809563}
-  - component: {fileID: 1608809564}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: player_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4492,9 +4512,9 @@ MonoBehaviour:
   animator: {fileID: 1608809563}
   attackPoint: {fileID: 925406876}
   attackRange: 0.5
-  enemyLayers:
+  playerLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!1001 &1614089823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4870,9 +4890,9 @@ MonoBehaviour:
   animator: {fileID: 1888723070}
   attackPoint: {fileID: 203958536}
   attackRange: 0.5
-  enemyLayers:
+  playerLayers:
     serializedVersion: 2
-    m_Bits: 640
+    m_Bits: 256
 --- !u!1001 &1905570553
 PrefabInstance:
   m_ObjectHideFlags: 0
