@@ -89,7 +89,7 @@ namespace scene_1
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(rightDPAD);
+            //Debug.Log(rightDPAD);
             if (this.enabled != false)
             {
                 // Move Player Left 
