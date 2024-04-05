@@ -26,6 +26,10 @@ namespace scene_1
         bool jumpDPAD = false;
         bool aButton = false;
 
+
+        private float speedPowerupScalar = 18f;
+        private int maxJumpsLeft = 1;
+
         public void DisableMovement()
         {
             this.enabled = false; // Disables the script and, consequently, player movement and actions.
@@ -95,7 +99,7 @@ namespace scene_1
                 // Move Player Left 
                 if (Input.GetKey(KeyCode.A) || leftDPAD)
                 {
-                    _rigidbody2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
+                    _rigidbody2D.AddForce(Vector2.left * speedPowerupScalar * Time.deltaTime, ForceMode2D.Impulse);
 
                     if (facingRight)
                     {
@@ -108,7 +112,7 @@ namespace scene_1
                 // Move Player Right
                 if (Input.GetKey(KeyCode.D) || rightDPAD)
                 {
-                    _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
+                    _rigidbody2D.AddForce(Vector2.right * speedPowerupScalar * Time.deltaTime, ForceMode2D.Impulse);
 
                     if (!facingRight)
                     {
@@ -171,6 +175,40 @@ namespace scene_1
             }
         }
 
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.GetComponent<Speed_Powerup>()) // Increases player speed for short period
+            {
+                Destroy(collision.gameObject); // Get rid of physical powerup
+                speedPowerupScalar = 36f;
+                StartCoroutine(Speed_Powerup(collision.gameObject.GetComponent<Speed_Powerup>().GetSecondsActive()));
+
+            }
+            else if (collision.gameObject.GetComponent<Jump_Powerup>()) //Adds ability to have an added jump for short period
+            {
+                Destroy(collision.gameObject); // Get rid of physical powerup
+                maxJumpsLeft = 2;
+                StartCoroutine(Jump_Powerup(collision.gameObject.GetComponent<Jump_Powerup>().GetSecondsActive()));
+            }
+            else if (collision.gameObject.GetComponent<Health_Powerup>()) //Regens 25 health
+            {
+                Destroy(collision.gameObject); // Get rid of physical powerup
+                GetComponent<health_manager>().AddHealth(25);
+            }
+        }
+
+        IEnumerator Speed_Powerup(float duration)
+        {
+            yield return new WaitForSeconds(duration);
+            speedPowerupScalar = 18f;
+        }
+
+        IEnumerator Jump_Powerup(float duration)
+        {
+            yield return new WaitForSeconds(duration);
+            maxJumpsLeft = 1;
+        }
+
         private void OnCollisionStay2D(Collision2D other) {
                 // Check that we collided with Ground
                 if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
@@ -187,7 +225,7 @@ namespace scene_1
                         if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                         {
                             // Reset jump count
-                            jumpsLeft = 2;
+                            jumpsLeft = maxJumpsLeft;
                         }
                     }
                 }
