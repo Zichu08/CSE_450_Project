@@ -2,23 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class menu : MonoBehaviour
+
+namespace menu
 {
-    // Start is called before the first frame update
-    void Start()
+    public class menu : MonoBehaviour
     {
         
+        public static menu instance;
+        public GameObject mainMenu;
+        public GameObject optionsMenu;
         
-    }
+        // Methods
+        void Awake() {
+            instance = this;
+            Show();
+        }
+        
+        public void Show() {
+            ShowMainMenu();
+            gameObject.SetActive(true);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        public void Hide() {
+            gameObject.SetActive(false);
+        }
 
-    public void RestartTheGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        
+        void SwitchMenu(GameObject someMenu) {
+            // Clean-up Menus
+            mainMenu.SetActive(false);
+            optionsMenu.SetActive(false);
+
+            // Turn on requested menu
+            someMenu.SetActive(true);
+        }
+
+        public void ShowMainMenu() {
+            SwitchMenu(mainMenu);
+        }
+
+        public void ShowOptionsMenu() {
+            SwitchMenu(optionsMenu);
+        }
+        
+        public void LoadCityScene()
+        {
+            SceneManager.LoadScene("scene_1");
+        }
     }
 }
