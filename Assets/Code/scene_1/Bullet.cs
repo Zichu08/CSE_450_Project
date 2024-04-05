@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 15.0f;
-    
+
     private void Start()
     {
     }
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
             // }
 
             player.RemoveHealth(damageAmount); // Remove 20 health from player 2
-   
+
         }
         gameObject.SetActive(false); // Make bullet disappear on impact with enemy
         Destroy(gameObject, 2.0f);
