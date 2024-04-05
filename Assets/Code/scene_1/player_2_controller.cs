@@ -26,6 +26,9 @@ namespace scene_1 {
         public string activePowerup = null;
         public Sprite powerupSprite;
 
+        private float speedPowerupScalar = 18f;
+        private int maxJumpsLeft = 1;
+
         public string GetActivePowerup()
         {
             return activePowerup;
@@ -51,7 +54,7 @@ namespace scene_1 {
                 // Move Player Left 
                 if (Input.GetKey(KeyCode.LeftArrow))
                 {
-                    _rigidbody2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
+                    _rigidbody2D.AddForce(Vector2.left * speedPowerupScalar * Time.deltaTime, ForceMode2D.Impulse);
 
                     if (facingRight)
                     {
@@ -63,7 +66,7 @@ namespace scene_1 {
                 // Move Player Right
                 if (Input.GetKey(KeyCode.RightArrow))
                 {
-                    _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
+                    _rigidbody2D.AddForce(Vector2.right * speedPowerupScalar * Time.deltaTime, ForceMode2D.Impulse);
 
                     if (!facingRight)
                     {
@@ -122,24 +125,34 @@ namespace scene_1 {
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            //TODO: Figure out why bullet sprite is not switching back to normal.. Get rid of error on player collision with bullet
-            if (collision.gameObject.GetComponent<Powerup>())
+            if (collision.gameObject.GetComponent<Speed_Powerup>()) // Increases player speed for short period
             {
-                Destroy(collision.gameObject);
-                activePowerup = collision.gameObject.GetComponent<Powerup>().GetPowerupID();
-                bulletPrefab.GetComponent<SpriteRenderer>().sprite = powerupSprite;
-                StartCoroutine(Powerup(collision.gameObject.GetComponent<Powerup>().GetSecondsActive()));
-                Debug.Log("Powerup complete");
+                Destroy(collision.gameObject); // Get rid of physical powerup
+                speedPowerupScalar = 36f;
+                StartCoroutine(Speed_Powerup(collision.gameObject.GetComponent<Speed_Powerup>().GetSecondsActive()));
+                
+            } else if (collision.gameObject.GetComponent<Jump_Powerup>()) //Adds ability to have an added jump for short period
+            {
+                Destroy(collision.gameObject); // Get rid of physical powerup
+                maxJumpsLeft = 2;
+                StartCoroutine(Jump_Powerup(collision.gameObject.GetComponent<Jump_Powerup>().GetSecondsActive()));
+            } else if (collision.gameObject.GetComponent<Health_Powerup>()) //Regens 25 health
+            {
+                Destroy(collision.gameObject); // Get rid of physical powerup
+                GetComponent<health_manager>().AddHealth(25);
             }
         }
 
-        IEnumerator Powerup(float duration)
+        IEnumerator Speed_Powerup(float duration)
         {
-            Sprite prevSprite = bulletPrefab.GetComponent<SpriteRenderer>().sprite;
-            Debug.Log("Player 2 picked up a powerup!");
             yield return new WaitForSeconds(duration);
-            activePowerup = null;
-            bulletPrefab.GetComponent<SpriteRenderer>().sprite = prevSprite;
+            speedPowerupScalar = 18f;
+        }
+
+        IEnumerator Jump_Powerup(float duration)
+        {
+            yield return new WaitForSeconds(duration);
+            maxJumpsLeft = 1;
         }
 
         private void OnCollisionStay2D(Collision2D other)
@@ -160,7 +173,7 @@ namespace scene_1 {
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
                         // Reset jump count
-                        jumpsLeft = 2;
+                        jumpsLeft = maxJumpsLeft;
                     }
                 }
             }

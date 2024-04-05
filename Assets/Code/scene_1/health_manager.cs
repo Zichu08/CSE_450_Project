@@ -3,7 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class health_manager : MonoBehaviour
+
+namespace scene_1
+{
+
+}
+
+    public class health_manager : MonoBehaviour
 {
     // Data members
     public int health = 199;
