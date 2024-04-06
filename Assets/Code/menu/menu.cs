@@ -11,6 +11,8 @@ namespace menu
         public static menu instance;
         public GameObject mainMenu;
         public GameObject optionsMenu;
+        public GameObject characterMenu;
+        public GameObject helpMenu;
         
         // Methods
         void Awake() {
@@ -32,6 +34,8 @@ namespace menu
             // Clean-up Menus
             mainMenu.SetActive(false);
             optionsMenu.SetActive(false);
+            characterMenu.SetActive(false);
+            helpMenu.SetActive(false);
 
             // Turn on requested menu
             someMenu.SetActive(true);
@@ -43,6 +47,16 @@ namespace menu
 
         public void ShowOptionsMenu() {
             SwitchMenu(optionsMenu);
+        }
+
+        public void ShowCharactorMenu()
+        {
+            SwitchMenu(characterMenu);
+        }
+
+        public void ShowHelpMenu()
+        {
+            SwitchMenu(helpMenu);
         }
         
         public void LoadCityScene()
