@@ -55,19 +55,19 @@ namespace scene_1
                 GameOver();
             }
             
-            int p1Health = p1HM.health;
-            int p2Health = p2HM.health;
+            int p1Lives = p1HM.livesRemaining;
+            int p2Lives = p2HM.livesRemaining;
             
             
-            if (p1Health == 0)
+            if (p1Lives <= 0)
             {
-                Debug.Log("P1 Health is 0");
+                Debug.Log("P1 has no lives remaining");
                 GameOver();
                 p2WinsText.SetActive(true);
             }
-            else if (p2Health == 0)
+            else if (p2Lives <= 0)
             {
-                Debug.Log("P2 Health is 0");
+                Debug.Log("P2 has no lives remaining");
                 GameOver();
                 p1WinsText.SetActive(true);
             }
