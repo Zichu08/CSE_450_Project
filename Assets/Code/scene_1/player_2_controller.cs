@@ -94,11 +94,14 @@ namespace scene_1 {
                 //Shoot
                 if (Input.GetKeyDown(KeyCode.M))
                 {
-                    print("Player 2 Shoot");
-                    GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-                    if (!facingRight) // If we are facing to the left, we want to rotate the bullet 180 degrees
+                    if (!GetComponent<melee_2>())
                     {
-                        bulletInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
+                        print("Player 2 Shoot");
+                        GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+                        if (!facingRight) // If we are facing to the left, we want to rotate the bullet 180 degrees
+                        {
+                            bulletInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
+                        }
                     }
                 }
             }
