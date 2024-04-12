@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class restart : MonoBehaviour
+public class BackMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
         
     }
 
@@ -17,9 +16,10 @@ public class restart : MonoBehaviour
     {
         
     }
-
-    public void RestartTheGame()
+    
+    public void BackToMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("menu");
     }
 }
+

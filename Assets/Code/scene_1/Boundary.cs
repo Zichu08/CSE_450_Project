@@ -40,7 +40,6 @@ namespace scene_1
         {
             if (player1Controller != null) player1Controller.DisableMovement();
             if (player2Controller != null) player2Controller.DisableMovement();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             button.SetActive(true);
         }
     }
