@@ -9,6 +9,7 @@ namespace scene_1 {
         // Outlet
         Rigidbody2D _rigidbody2D;
 
+
         // State Tracking
         public int jumpsLeft;
 
