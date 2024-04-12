@@ -7,19 +7,23 @@ namespace menu
 {
     public class menu : MonoBehaviour
     {
-        
         public static menu instance;
+
+        // Menus
         public GameObject mainMenu;
         public GameObject optionsMenu;
         public GameObject characterMenu;
         public GameObject helpMenu;
-        
-        // Methods
+
+        // Selections
+        private string selectedScene;
+        private string selectedCharacter;
+
         void Awake() {
             instance = this;
             Show();
         }
-        
+
         public void Show() {
             ShowMainMenu();
             gameObject.SetActive(true);
@@ -29,7 +33,6 @@ namespace menu
             gameObject.SetActive(false);
         }
 
-        
         void SwitchMenu(GameObject someMenu) {
             // Clean-up Menus
             mainMenu.SetActive(false);
@@ -49,19 +52,38 @@ namespace menu
             SwitchMenu(optionsMenu);
         }
 
-        public void ShowCharactorMenu()
-        {
+        public void ShowCharacterMenu() {
             SwitchMenu(characterMenu);
         }
 
-        public void ShowHelpMenu()
-        {
+        public void ShowHelpMenu() {
             SwitchMenu(helpMenu);
         }
-        
-        public void LoadCityScene()
-        {
-            SceneManager.LoadScene("scene_1");
+
+        public void SelectCityScene() {
+            selectedScene = "scene_1";
+            ShowCharacterMenu(); // Move to character selection after choosing the map
+        }
+
+        public void SelectBeachScene() {
+            selectedScene = "scene_2";
+            ShowCharacterMenu(); // Move to character selection after choosing the map
+        }
+
+        public void SelectSoldier() {
+            selectedCharacter = "Soldier";
+            ShowHelpMenu();
+        }
+
+        public void SelectSwordsman() {
+            selectedCharacter = "Swordsman";
+            ShowHelpMenu();
+        }
+
+        public void LoadGame() {
+            // Example method to load the game with the selected scene and character
+            Debug.Log($"Loading {selectedScene} with {selectedCharacter}");
+            SceneManager.LoadScene(selectedScene);
         }
     }
 }

@@ -19,6 +19,7 @@ namespace scene_1
         [SerializeField] private GameObject p2WinsText;
 
         public GameObject button;
+        public GameObject button2;
         public GameObject p1;
         public health_manager p1HM;
         public GameObject p2;
@@ -38,7 +39,9 @@ namespace scene_1
             p1HM = GameObject.Find("player_1").GetComponent<health_manager>();
             p2HM = GameObject.Find("player_2").GetComponent<health_manager>();
             button = GameObject.Find("button");
+            button2 = GameObject.Find("button2");
             button.SetActive(false);
+            button2.SetActive(false);
         }
 
         private void Update()
@@ -53,6 +56,7 @@ namespace scene_1
                 remainingTime = 0;
                 timerText.color = Color.red;
                 GameOver();
+                button2.SetActive(false);
             }
             
             int p1Lives = p1HM.livesRemaining;
@@ -64,12 +68,14 @@ namespace scene_1
                 Debug.Log("P1 has no lives remaining");
                 GameOver();
                 p2WinsText.SetActive(true);
+                button2.SetActive(false);
             }
             else if (p2Lives <= 0)
             {
                 Debug.Log("P2 has no lives remaining");
                 GameOver();
                 p1WinsText.SetActive(true);
+                button2.SetActive(false);
             }
         }
         
@@ -86,7 +92,6 @@ namespace scene_1
             if (player1Controller != null) player1Controller.DisableMovement();
             if (player2Controller != null) player2Controller.DisableMovement();
            // gameOverText.SetActive(true);
-           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
            button.SetActive(true);
         }
 
