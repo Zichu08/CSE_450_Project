@@ -138,7 +138,10 @@ namespace scene_1
                 //Shoot
                 if (Input.GetKeyDown(KeyCode.Space) || aButton)
                 {
-                    shootFunc();
+                    if (!GetComponent<melee_1>())
+                    {
+                        shootFunc();
+                    }
                 }
 
             }
