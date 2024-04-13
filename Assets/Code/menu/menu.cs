@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace menu
-{
+namespace menu {
     public class menu : MonoBehaviour
     {
         public static menu instance;
@@ -13,7 +13,8 @@ namespace menu
         public GameObject mainMenu;
         public GameObject optionsMenu;
         public GameObject characterMenu;
-        public GameObject helpMenu;
+        // public GameObject helpMenu;
+        // public GameObject settingMenu;
 
         // Selections
         private string selectedScene;
@@ -23,6 +24,8 @@ namespace menu
             instance = this;
             Show();
         }
+
+
 
         public void Show() {
             ShowMainMenu();
@@ -38,7 +41,7 @@ namespace menu
             mainMenu.SetActive(false);
             optionsMenu.SetActive(false);
             characterMenu.SetActive(false);
-            helpMenu.SetActive(false);
+            // helpMenu.SetActive(false);
 
             // Turn on requested menu
             someMenu.SetActive(true);
@@ -56,9 +59,9 @@ namespace menu
             SwitchMenu(characterMenu);
         }
 
-        public void ShowHelpMenu() {
+        /*public void ShowHelpMenu() {
             SwitchMenu(helpMenu);
-        }
+        }*/
 
         public void SelectCityScene() {
             selectedScene = "scene_1";
@@ -70,7 +73,7 @@ namespace menu
             ShowCharacterMenu(); // Move to character selection after choosing the map
         }
 
-        public void SelectSoldier() {
+        /*public void SelectSoldier() {
             selectedCharacter = "Soldier";
             ShowHelpMenu();
         }
@@ -78,7 +81,7 @@ namespace menu
         public void SelectSwordsman() {
             selectedCharacter = "Swordsman";
             ShowHelpMenu();
-        }
+        }*/
 
         public void LoadGame() {
             // Example method to load the game with the selected scene and character

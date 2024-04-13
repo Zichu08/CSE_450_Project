@@ -28,7 +28,7 @@ public class melee_1: MonoBehaviour
         // Diebug.Log("running");
         foreach (Collider2D player in hitEnemies)
         {
-             Debug.Log("running");
+             //Debug.Log("running");
             if (player.name == "player_2")
             {
                // Debug.Log(enemy.name);

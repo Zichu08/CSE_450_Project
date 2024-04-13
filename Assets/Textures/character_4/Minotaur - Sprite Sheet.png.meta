@@ -1,0 +1,2780 @@
+fileFormatVersion: 2
+guid: 4559b9e6b1fd8df448e313bebbb00d2b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1856
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16aa8ffda4a8a9a45a0784b1fa7619df
+      internalID: -690327063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1856
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd97c379ae5ac34d9dbde0e0a57c674
+      internalID: 1257153536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1856
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6086daa229272814db48311fd03fcbb7
+      internalID: -1558254640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1856
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8ae1a5a87edcc438b3a78ec631210e
+      internalID: -1976365245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1856
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22ad57c038d6594083bb23248142c99
+      internalID: 15598579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1762
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce12691ea72c0240bb3e3386b55074c
+      internalID: -2048968557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1764
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4b96b739a9b104fada1066da3632ad
+      internalID: -1279203335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1762
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3374d62d05992f24b928612908776c09
+      internalID: 557258240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1760
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f1c2dcbe15356448c54d0f266dc5c6
+      internalID: -742453493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1762
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166daddfdb47bc6438bee3d211d10565
+      internalID: -1894633626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1764
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c6e0251da06874387a97a0c846be1c
+      internalID: 334711492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1762
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b540fc1cff1e24b9fb24ef93956972
+      internalID: 397031881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1760
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2af96596db46b94bbc1f993d0539a6e
+      internalID: 515520527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1664
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6fad979003f744b94b9cb022d6786d
+      internalID: -1645078323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1664
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad846dcf1f259c46b3822324e2d7b68
+      internalID: 1291033448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1664
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e3728dcff4d9549b4d28a062b41b82
+      internalID: 136262974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1664
+        width: 56
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0582a7ca0a2344419847931d0c91521
+      internalID: 382090228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1664
+        width: 58
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9f2b5bc58934640afa81d4fc05c50a
+      internalID: -489093608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1568
+        width: 56
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff4051dfedfc9e4aa77c0af7c6b5ba6
+      internalID: 267328148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1562
+        width: 75
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de384d215687c34c835b10353d3dfea
+      internalID: 1263864613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1562
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea9bf3352991f2478578cf46bb454e8
+      internalID: -700958929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1562
+        width: 57
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ebed5824304ac43a199bcfcffe15ff
+      internalID: 1895959923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1563
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ece1d00c1bd4c49bcbb3b51d008543
+      internalID: 1814576501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1563
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ef831fe00f21f468266479ea5a8936
+      internalID: 1130073233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1563
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d842126b980c17f41acbeb610adb4d60
+      internalID: -698712787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1568
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0791202c13d3d49b2ab1cb6bbc931b
+      internalID: -216338902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1568
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0ee849e147db845bd731348e537cc8
+      internalID: 546094398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1472
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4650e5a31969d594db1f45418871a4aa
+      internalID: 515204164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1472
+        width: 59
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf73ab6619c0c4440862689211fd7ca5
+      internalID: -627990796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1472
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b5ef77c79c5274882b5aef14dbb923
+      internalID: -709008581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1472
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f00cb74767a8934b87e1b158be377e9
+      internalID: 619695111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1472
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b27e62bd74eef34f8a0d3d4f76bdd12
+      internalID: -1152831044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1376
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3b97ddd3ccbfd4292b1473bdd654b7
+      internalID: -571202979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1376
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac464528e814ef408c02d73cbfc5c39
+      internalID: -1194379849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1376
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee937012da8b88488e4b676520baf56
+      internalID: -452201435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1376
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e45349be9333a4db68674470f33971
+      internalID: -1179538331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1376
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c1e8bd7145356459b570817c39e377
+      internalID: 1036140932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1376
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33e46071ed6e8e40b8ed2098555e136
+      internalID: -13935113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1280
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea2d2d1b475ad64ea0c401bac2a0639
+      internalID: 1350332779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1280
+        width: 54
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb331523b0b17a4459e1b9c557176a9c
+      internalID: -1642567140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1280
+        width: 54
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7429d936e939ee641b6278a1f9ea28ca
+      internalID: 780885423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1280
+        width: 68
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3777fc2efe9464b9c356b0496576be
+      internalID: 1960677050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1280
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8bbb2d2faba8c4fb83abcf1dd2344c
+      internalID: 1205311969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1284
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ac92b21c7931545b1246edd6aef249
+      internalID: -1707307667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1274
+        width: 68
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b289698f375f594da65a6383c06d191
+      internalID: -1617360619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1275
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6ed252aa4a9a941a3f50d120c50557
+      internalID: -333674895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1275
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93cb81ec65ae7d547a6168b7362813b7
+      internalID: 57869715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1275
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3463d7be74a30174181bc42622f56efb
+      internalID: 1225340047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1184
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dface65346743154880846e127b1aa54
+      internalID: -669684177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1184
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa6e0133bc672f4390aaad17f97f7c9
+      internalID: 2057558213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1184
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f327214f7404443908e97299121a07
+      internalID: -1302527951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1088
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc4027ee2c03dd4683bd1d4c9c3838d
+      internalID: 1838024470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1088
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2f8e56c3918a548805d8b86ea77004
+      internalID: 423545924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1088
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cf79b5f89a17340b7f3e340f5c3858
+      internalID: 1054860472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 992
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf340fa52e58914aa5d4bd5605ad5e4
+      internalID: 2114120061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 992
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a353c51ddc5e5e54597f0ab95c464e0f
+      internalID: 310768939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 992
+        width: 54
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b992297f6462a241a626295202e39ce
+      internalID: -58079803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 991
+        width: 54
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825452f0b3584cd4eb8af0dae73a938b
+      internalID: 1959229547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 991
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580ad98fd6ea0f64592d79803b9b7ff3
+      internalID: -1086923354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 991
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0040f99b10dbb3b499ff9497528d064d
+      internalID: 1267682337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 896
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b960595cd7a658448c7632ab268ba80
+      internalID: 1864144072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 896
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7471df142606af468aafd48d5f77c77
+      internalID: -2122049064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 896
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ece27209a7fa44ea299e1d48b7b2b0
+      internalID: 1848504587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 896
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794a537b7d7aeef40a0efb6486a3ee68
+      internalID: 1094478868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 896
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b121e54277cf60448ced4cdeb542a00
+      internalID: 539154348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 802
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44207c9cdab53d04498b90332d6c80e6
+      internalID: -697529201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 804
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1560511b60de37648895a4d582158153
+      internalID: 385677635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 802
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b25d2fb0f743047b22d4cad9adcad1
+      internalID: -574352342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 800
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c38f88cd0950840be710c4a180af1a
+      internalID: -1117045040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 802
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20783f3a206db2947ab19aacba93226b
+      internalID: -1258803912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 804
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95288ca1045866848ae673f760b9c692
+      internalID: -545153261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 802
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9d22a4d4cb4314fa7e9d4489869a77
+      internalID: 1337461041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 800
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d1c6ae83094374381e009fe3401397
+      internalID: 849709727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 704
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534cb6c3ddd032346adf6cdd682247b7
+      internalID: 99908116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 704
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a5e307f65d64242a1590c7b6960ce7
+      internalID: -130919195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 704
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f93e94b380980488b0adba02f3dbca
+      internalID: 787563220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 704
+        width: 56
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecb01eb2ae86a24bb8a1e15023bc5fb
+      internalID: 931299163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 704
+        width: 58
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9a08ec5d16e3c4499ddd489e0cef07
+      internalID: -1708805806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 608
+        width: 56
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ddab83e070e6148a581413076a7dbe
+      internalID: -1849861670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 602
+        width: 75
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2582154ec089f4e976ea53fba0c691
+      internalID: -2138131369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 602
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c5b2f1326b9114b8b02eedcd2a2574
+      internalID: 1471222318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 602
+        width: 57
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13160229c1c7d944e98e9b5c2be06cd3
+      internalID: -781908763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 603
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c288d241057713d4983d2bf7a5f6dd84
+      internalID: 468411307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 603
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b868e959ca2eaf42800d47eeec6a6d5
+      internalID: 54425277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 603
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e87f78913a93e4ba0e2c40b9a6a4d2
+      internalID: 305674754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 608
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526ef4bde35319b4189f5aa70a436189
+      internalID: -653783798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 608
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3547be11387a946a15e47c1eefb356
+      internalID: 54871918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 512
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315ffc2f452ae0e4cb21bfc4542b63a8
+      internalID: -1193388166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 512
+        width: 59
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92d97376e8022f46879569527829d72
+      internalID: -2022323386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 512
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be03127f7e466149982680f1d6c0f72
+      internalID: -946548157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 512
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1dd6fc613913748acf5f84508312cc
+      internalID: 1921639369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 512
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d747d6520b99cd44cb5684e94d8e31f5
+      internalID: -339306239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 416
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1e8b64045ff824984c0f1981d491ed
+      internalID: -928237697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 416
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adfef8e644f2434a8a9420b9a8708a5
+      internalID: -2073204739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 416
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5a66ac9df8f624c8bc728cd7009593
+      internalID: 1701741035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 416
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b59c221e42343445b984784a842b39f
+      internalID: -1231592885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 416
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4514e507f3ca61468ec61a9fb7cbf05
+      internalID: 1664794361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 416
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dae5a8123cd8924699f7beccfca37ab
+      internalID: 526853793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 320
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f15788faddffc4db9408865c287c69
+      internalID: -176385659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 320
+        width: 54
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fc50b5dd09f0c4aa6b81a9bf34b74c
+      internalID: 1341940293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 320
+        width: 54
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e1e195843cf154c842d9cb3d52c316
+      internalID: 1175182252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 320
+        width: 68
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4eca0f65b609d74eae8988b5def4b86
+      internalID: 574349536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 320
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7565d3497b21545b501ce08e87584c
+      internalID: -1301558904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 314
+        width: 68
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63be91597e1a2ea47ad1ef6e0a7ab7a1
+      internalID: 2056073370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 324
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6986d7c3177bfa4c8cfd84095fe7ff9
+      internalID: -672127686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 315
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3838e55c0a455ec44b86281f020afd5b
+      internalID: -1404830333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 315
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660880a2643d0ac4eb11fef7d07c552d
+      internalID: -447603853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 315
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d04e978af10eb94fac1cfdd65fc3e31
+      internalID: -112826433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fc6f3a75feec24cb7713dfe911062e
+      internalID: -244298397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271235557dcfeca438d1271e78f37fbb
+      internalID: -2010378571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 224
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52464f5a721bac949befd0e06db1417d
+      internalID: -403670883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed2264a076738246b919123d51c64a5
+      internalID: 982219891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae69e0c913fac43439161c7ecab36556
+      internalID: -1345159432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7091e6888e3bdf4caccdab8ead6b76e
+      internalID: 1995781337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34d3264aa8b4244e85a230d4ab68d52
+      internalID: 258149867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 32
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de0d477c3df2824aaa45ba76c37cf68
+      internalID: -798822558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 32
+        width: 54
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b9d64461dd1a54b8c51571426f956c
+      internalID: 1463979822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 31
+        width: 54
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b12066f8a1fc5e4e9e15b744f8e6738
+      internalID: 1513054975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 31
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9796939ca769c7c449760f6f5fba97ac
+      internalID: -1530296850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minotaur - Sprite Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 31
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff15056c70d6e2e4785b8c966dd99054
+      internalID: -660882607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Minotaur - Sprite Sheet_0: -690327063
+      Minotaur - Sprite Sheet_1: 1257153536
+      Minotaur - Sprite Sheet_10: 334711492
+      Minotaur - Sprite Sheet_100: 1175182252
+      Minotaur - Sprite Sheet_101: 574349536
+      Minotaur - Sprite Sheet_102: -1301558904
+      Minotaur - Sprite Sheet_103: 2056073370
+      Minotaur - Sprite Sheet_104: -672127686
+      Minotaur - Sprite Sheet_105: -1404830333
+      Minotaur - Sprite Sheet_106: -447603853
+      Minotaur - Sprite Sheet_107: -112826433
+      Minotaur - Sprite Sheet_108: -244298397
+      Minotaur - Sprite Sheet_109: -2010378571
+      Minotaur - Sprite Sheet_11: 397031881
+      Minotaur - Sprite Sheet_110: -403670883
+      Minotaur - Sprite Sheet_111: 982219891
+      Minotaur - Sprite Sheet_112: -1345159432
+      Minotaur - Sprite Sheet_113: 1995781337
+      Minotaur - Sprite Sheet_114: 258149867
+      Minotaur - Sprite Sheet_115: -798822558
+      Minotaur - Sprite Sheet_116: 1463979822
+      Minotaur - Sprite Sheet_117: 1513054975
+      Minotaur - Sprite Sheet_118: -1530296850
+      Minotaur - Sprite Sheet_119: -660882607
+      Minotaur - Sprite Sheet_12: 515520527
+      Minotaur - Sprite Sheet_13: -1645078323
+      Minotaur - Sprite Sheet_14: 1291033448
+      Minotaur - Sprite Sheet_15: 136262974
+      Minotaur - Sprite Sheet_16: 382090228
+      Minotaur - Sprite Sheet_17: -489093608
+      Minotaur - Sprite Sheet_18: 267328148
+      Minotaur - Sprite Sheet_19: 1263864613
+      Minotaur - Sprite Sheet_2: -1558254640
+      Minotaur - Sprite Sheet_20: -700958929
+      Minotaur - Sprite Sheet_21: 1895959923
+      Minotaur - Sprite Sheet_22: 1814576501
+      Minotaur - Sprite Sheet_23: 1130073233
+      Minotaur - Sprite Sheet_24: -698712787
+      Minotaur - Sprite Sheet_25: -216338902
+      Minotaur - Sprite Sheet_26: 546094398
+      Minotaur - Sprite Sheet_27: 515204164
+      Minotaur - Sprite Sheet_28: -627990796
+      Minotaur - Sprite Sheet_29: -709008581
+      Minotaur - Sprite Sheet_3: -1976365245
+      Minotaur - Sprite Sheet_30: 619695111
+      Minotaur - Sprite Sheet_31: -1152831044
+      Minotaur - Sprite Sheet_32: -571202979
+      Minotaur - Sprite Sheet_33: -1194379849
+      Minotaur - Sprite Sheet_34: -452201435
+      Minotaur - Sprite Sheet_35: -1179538331
+      Minotaur - Sprite Sheet_36: 1036140932
+      Minotaur - Sprite Sheet_37: -13935113
+      Minotaur - Sprite Sheet_38: 1350332779
+      Minotaur - Sprite Sheet_39: -1642567140
+      Minotaur - Sprite Sheet_4: 15598579
+      Minotaur - Sprite Sheet_40: 780885423
+      Minotaur - Sprite Sheet_41: 1960677050
+      Minotaur - Sprite Sheet_42: 1205311969
+      Minotaur - Sprite Sheet_43: -1707307667
+      Minotaur - Sprite Sheet_44: -1617360619
+      Minotaur - Sprite Sheet_45: -333674895
+      Minotaur - Sprite Sheet_46: 57869715
+      Minotaur - Sprite Sheet_47: 1225340047
+      Minotaur - Sprite Sheet_48: -669684177
+      Minotaur - Sprite Sheet_49: 2057558213
+      Minotaur - Sprite Sheet_5: -2048968557
+      Minotaur - Sprite Sheet_50: -1302527951
+      Minotaur - Sprite Sheet_51: 1838024470
+      Minotaur - Sprite Sheet_52: 423545924
+      Minotaur - Sprite Sheet_53: 1054860472
+      Minotaur - Sprite Sheet_54: 2114120061
+      Minotaur - Sprite Sheet_55: 310768939
+      Minotaur - Sprite Sheet_56: -58079803
+      Minotaur - Sprite Sheet_57: 1959229547
+      Minotaur - Sprite Sheet_58: -1086923354
+      Minotaur - Sprite Sheet_59: 1267682337
+      Minotaur - Sprite Sheet_6: -1279203335
+      Minotaur - Sprite Sheet_60: 1864144072
+      Minotaur - Sprite Sheet_61: -2122049064
+      Minotaur - Sprite Sheet_62: 1848504587
+      Minotaur - Sprite Sheet_63: 1094478868
+      Minotaur - Sprite Sheet_64: 539154348
+      Minotaur - Sprite Sheet_65: -697529201
+      Minotaur - Sprite Sheet_66: 385677635
+      Minotaur - Sprite Sheet_67: -574352342
+      Minotaur - Sprite Sheet_68: -1117045040
+      Minotaur - Sprite Sheet_69: -1258803912
+      Minotaur - Sprite Sheet_7: 557258240
+      Minotaur - Sprite Sheet_70: -545153261
+      Minotaur - Sprite Sheet_71: 1337461041
+      Minotaur - Sprite Sheet_72: 849709727
+      Minotaur - Sprite Sheet_73: 99908116
+      Minotaur - Sprite Sheet_74: -130919195
+      Minotaur - Sprite Sheet_75: 787563220
+      Minotaur - Sprite Sheet_76: 931299163
+      Minotaur - Sprite Sheet_77: -1708805806
+      Minotaur - Sprite Sheet_78: -1849861670
+      Minotaur - Sprite Sheet_79: -2138131369
+      Minotaur - Sprite Sheet_8: -742453493
+      Minotaur - Sprite Sheet_80: 1471222318
+      Minotaur - Sprite Sheet_81: -781908763
+      Minotaur - Sprite Sheet_82: 468411307
+      Minotaur - Sprite Sheet_83: 54425277
+      Minotaur - Sprite Sheet_84: 305674754
+      Minotaur - Sprite Sheet_85: -653783798
+      Minotaur - Sprite Sheet_86: 54871918
+      Minotaur - Sprite Sheet_87: -1193388166
+      Minotaur - Sprite Sheet_88: -2022323386
+      Minotaur - Sprite Sheet_89: -946548157
+      Minotaur - Sprite Sheet_9: -1894633626
+      Minotaur - Sprite Sheet_90: 1921639369
+      Minotaur - Sprite Sheet_91: -339306239
+      Minotaur - Sprite Sheet_92: -928237697
+      Minotaur - Sprite Sheet_93: -2073204739
+      Minotaur - Sprite Sheet_94: 1701741035
+      Minotaur - Sprite Sheet_95: -1231592885
+      Minotaur - Sprite Sheet_96: 1664794361
+      Minotaur - Sprite Sheet_97: 526853793
+      Minotaur - Sprite Sheet_98: -176385659
+      Minotaur - Sprite Sheet_99: 1341940293
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
