@@ -15,7 +15,7 @@ public class player_movement : MonoBehaviour {
     private bool sprite_facing_right;
     
     //  constants
-    private const int max_jumps_left = 1;
+    private int max_jumps_left = 1;
     
     // animator
     private Animator animator;
@@ -24,6 +24,7 @@ public class player_movement : MonoBehaviour {
     void Start() {
         rigid_body_2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        max_jumps_left = 2;
     }
 
     void Update() {
@@ -60,6 +61,7 @@ public class player_movement : MonoBehaviour {
                 // check that we collided with ground below our feet
                 if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) {
                     // reset jump count
+                    Debug.Log("running");
                     jumps_left = max_jumps_left;
                 }
             }
