@@ -1,24 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace scene_1
-{
-}
-    public class health_manager : MonoBehaviour
-    {
-        // Outlets
-        public GameObject heartPrefab;
-        public Transform heartsContainer; // Reference to the Canvas transform
+public class health_manager : MonoBehaviour { 
+    // outlets
+    public GameObject heartPrefab;
+    public Transform heartsContainer; // Reference to the Canvas transform
 
         // Data members
         public int health = 199;
         public bool alive = true;
         public health_bar_controller health_bar;
-        public int livesRemaining = 3;
-        public int maxHearts = 5;
+        public int livesRemaining;
+        public int maxHearts;
 
         /*
          * Set health points to a specified number
@@ -30,11 +22,11 @@ namespace scene_1
             health_bar.set_max_health(200);
         }
 
-        private void Start()
-        {
+        private void Start() {
             livesRemaining = 3;
             SetHealth(200);
             RenderHearts();
+            alive = true;
         }
 
 
