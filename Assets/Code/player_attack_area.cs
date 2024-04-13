@@ -8,6 +8,7 @@ public class player_attack_area : MonoBehaviour {
     // events
     private void OnTriggerEnter2D(Collider2D collider) {
         if (collider.GetComponent<health_manager>() != null && collider.name != name) {
+            
             collider.GetComponent<health_manager>().RemoveHealth(20);
         }
     }

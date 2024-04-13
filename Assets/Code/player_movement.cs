@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class player_movement : MonoBehaviour {
@@ -51,17 +52,19 @@ public class player_movement : MonoBehaviour {
     private void OnCollisionStay2D(Collision2D other) {
         // check that we collided with Ground layer
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+            
             // check what is directly below our character's feet
-            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 0.7f);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1.5f);
             
             // we might have multiple things below our character's feet
             for (int i = 0; i < hits.Length; i++) {
                 RaycastHit2D hit = hits[i];
-        
+                Debug.Log(hit.collider.name);
+                Debug.Log("running");
                 // check that we collided with ground below our feet
                 if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) {
                     // reset jump count
-                    Debug.Log("running");
+                    
                     jumps_left = max_jumps_left;
                 }
             }

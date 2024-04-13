@@ -64,10 +64,14 @@ public class player_melee : MonoBehaviour {
     }
     
     void attack2() {
+        Debug.Log("running");
+        attacking = true;
         attack_area_2.SetActive(attacking);
     }
     
-    void attack3() {
+    void attack3()
+    {
+        attacking = true;
         attack_area_3.SetActive(attacking);
     }
 }
