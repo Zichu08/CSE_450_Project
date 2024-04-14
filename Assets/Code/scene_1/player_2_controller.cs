@@ -15,6 +15,7 @@ namespace scene_1 {
 
         // State for keping track of player direction
         bool facingRight = true;
+        private SpriteRenderer spriteRenderer;
 
         //Animator
         Animator animator;
@@ -26,7 +27,6 @@ namespace scene_1 {
         //Powerup status
         public string activePowerup = null;
         public Sprite powerupSprite;
-
         private float speedPowerupScalar = 18f;
         private int maxJumpsLeft = 1;
 
@@ -43,6 +43,7 @@ namespace scene_1 {
         // Methods
         void Start()
         {
+            spriteRenderer = GetComponent<SpriteRenderer>(); // Initialize the spriteRenderer
             _rigidbody2D = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
         }
@@ -186,12 +187,10 @@ namespace scene_1 {
         }
 
         private void FlipSpriteDirection()
-        { //Flips the direction the sprite is facing
-            Vector3 currentScale = gameObject.transform.localScale;
-            currentScale.x *= -1;
-            gameObject.transform.localScale = currentScale;
+        {
+            //Flips the direction the sprite is facing
+            spriteRenderer.flipX = !spriteRenderer.flipX;
             facingRight = !facingRight;
-            print("Player is facing right: " + facingRight);
         }
     }
 }
