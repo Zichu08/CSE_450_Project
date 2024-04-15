@@ -754,6 +754,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 631058227219186547, guid: 0247ae0fea4ae1a419e85abf015f2851, type: 3}
+      propertyPath: heartsContainer
+      value: 
+      objectReference: {fileID: 2104562174}
     - target: {fileID: 3598904716988114673, guid: 0247ae0fea4ae1a419e85abf015f2851, type: 3}
       propertyPath: m_Name
       value: player_1
@@ -1654,7 +1658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1Controller: {fileID: 0}
-  player2Controller: {fileID: 1608809560}
+  player2Controller: {fileID: 0}
   gameOverText: {fileID: 289821215}
   p1WinsText: {fileID: 37585051}
   p2WinsText: {fileID: 753727836}
@@ -3545,7 +3549,7 @@ MonoBehaviour:
   timerText: {fileID: 509858707}
   remainingTime: 10
   player1Controller: {fileID: 0}
-  player2Controller: {fileID: 1608809560}
+  player2Controller: {fileID: 0}
   gameOverText: {fileID: 289821215}
   p1WinsText: {fileID: 37585051}
   p2WinsText: {fileID: 753727836}
@@ -4299,11 +4303,11 @@ GameObject:
   - component: {fileID: 1608809558}
   - component: {fileID: 1608809557}
   - component: {fileID: 1608809556}
-  - component: {fileID: 1608809560}
   - component: {fileID: 1608809564}
   - component: {fileID: 1608809561}
   - component: {fileID: 1608809562}
   - component: {fileID: 1608809563}
+  - component: {fileID: 1608809565}
   m_Layer: 8
   m_Name: player_2
   m_TagString: Untagged
@@ -4443,23 +4447,6 @@ Transform:
   - {fileID: 925406876}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1608809560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608809555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfca08e3c5f9d8a4aa135457bd074d34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpsLeft: 0
-  firePoint: {fileID: 514903577}
-  bulletPrefab: {fileID: 4893313951041574570, guid: ef1b96bb4eb4a4064b482c2e1473b807, type: 3}
-  activePowerup: 
-  powerupSprite: {fileID: 0}
 --- !u!114 &1608809561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4530,6 +4517,22 @@ MonoBehaviour:
   playerLayers:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &1608809565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608809555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6581d22f2a940f34a87afd528719b0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: 273
+  move_left: 276
+  move_right: 275
+  jumps_left: 0
 --- !u!1001 &1703171800
 PrefabInstance:
   m_ObjectHideFlags: 0
