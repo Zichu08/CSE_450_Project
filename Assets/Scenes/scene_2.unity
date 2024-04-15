@@ -4590,7 +4590,7 @@ MonoBehaviour:
   jump: 273
   move_left: 276
   move_right: 275
-  jumps_left: 0
+  jumps_left: 2
 --- !u!1001 &1683979494
 PrefabInstance:
   m_ObjectHideFlags: 0

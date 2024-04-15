@@ -67,7 +67,7 @@ public class health_manager : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the player has collided with a boundary
         if (other.CompareTag("Boundary"))
