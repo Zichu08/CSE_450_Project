@@ -12,6 +12,10 @@ public class health_manager : MonoBehaviour {
         public int livesRemaining;
         public int maxHearts;
 
+        private CapsuleCollider2D character_collider;
+        private Animator animator;
+        private Rigidbody2D character;
+
         /*
          * Set health points to a specified number
          * Parameters - healthPoints: A single unit of health
@@ -20,6 +24,7 @@ public class health_manager : MonoBehaviour {
         {
             health = healthPoints;
             health_bar.set_max_health(200);
+            
         }
 
         private void Start() {
@@ -27,6 +32,9 @@ public class health_manager : MonoBehaviour {
             SetHealth(200);
             RenderHearts();
             alive = true;
+            character_collider = GetComponent<CapsuleCollider2D>();
+            animator = GetComponent<Animator>();
+            character = GetComponent<Rigidbody2D>();
         }
 
 
@@ -68,11 +76,13 @@ public class health_manager : MonoBehaviour {
             health -= healthPoints;
             if (health <= 0 && livesRemaining > 0)
             {
+                animator.SetTrigger("death");
                 // Player lost a life but still has more lives remaining
                 livesRemaining--; // Lose a life
+                
                 RenderHearts(); // Render hearts
                 health_bar.set_health(0); // Set the health bar to zero
-
+                
                 if (livesRemaining > 0)
                 {
                     // Reset health for the next life
@@ -87,6 +97,7 @@ public class health_manager : MonoBehaviour {
             else
             {
                 // Update the health bar if health is still above 0
+                animator.SetTrigger("hurt");
                 health_bar.set_health(health);
             }
         }
@@ -148,4 +159,20 @@ public class health_manager : MonoBehaviour {
                 heart.SetActive(i < livesRemaining);
             }
         }
+
+        public void enable_invincible()
+        {
+            character.gravityScale = 0;
+            character_collider.enabled = false;
+            
+        }
+
+        public void disable_invincible()
+        {
+            
+            character_collider.enabled = true;
+            character.gravityScale = 1.5f;
+        }
+        
+        
     }
