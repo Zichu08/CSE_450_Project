@@ -17,16 +17,12 @@ public class player_movement : MonoBehaviour {
     
     //  constants
     private int max_jumps_left = 1;
-
-    // character sprite
-    private SpriteRenderer spriteRenderer;
-
+    
     // animator
     private Animator animator;
     
     // event functions
     void Start() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         rigid_body_2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         max_jumps_left = 2;
@@ -98,7 +94,9 @@ public class player_movement : MonoBehaviour {
     }
     
     void flipSpriteDirection() {
-        spriteRenderer.flipX = !spriteRenderer.flipX;
+        Vector3 current_scale = gameObject.transform.localScale;
+        current_scale.x *= -1;
+        gameObject.transform.localScale = current_scale;
         sprite_facing_right = !sprite_facing_right;
     }
 }

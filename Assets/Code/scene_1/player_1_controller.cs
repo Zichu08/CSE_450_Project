@@ -26,7 +26,7 @@ namespace scene_1
         bool jumpDPAD = false;
         bool aButton = false;
 
-        private SpriteRenderer spriteRenderer;
+
         private float speedPowerupScalar = 18f;
         private int maxJumpsLeft = 1;
 
@@ -79,8 +79,6 @@ namespace scene_1
 
             controller.Gameplay.Shoot.started += ctx => shootFunc();
             //controller.Gameplay.Shoot.canceled += ctx => aButton = false;
-            spriteRenderer = GetComponent<SpriteRenderer>(); // Initialize the spriteRenderer
-
 
         }
 
@@ -153,7 +151,9 @@ namespace scene_1
             void FlipSpriteDirection()
             {
                 //Flips the direction the sprite is facing
-                spriteRenderer.flipX = !spriteRenderer.flipX;
+                Vector3 currentScale = gameObject.transform.localScale;
+                currentScale.x *= -1;
+                gameObject.transform.localScale = currentScale;
                 facingRight = !facingRight;
             }
             

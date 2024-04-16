@@ -9,20 +9,16 @@ namespace scene_1
     {
         public static float secondsActive = 5f;
 
-        private float startXPos;
-        private float startYPos;
-
         // Start is called before the first frame update
         void Start()
         {
-            startXPos = transform.position.x;
-            startYPos = transform.position.y;
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            transform.position = new Vector2(startXPos, startYPos + Mathf.Sin(Time.realtimeSinceStartup) * 0.25f);
+            transform.position = new Vector2(-2.16f, 1.36f + Mathf.Sin(Time.realtimeSinceStartup) * 0.25f);
         }
 
         public float GetSecondsActive()
