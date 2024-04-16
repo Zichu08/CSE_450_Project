@@ -13,7 +13,9 @@ namespace menu {
         public GameObject mainMenu;
         public GameObject optionsMenu;
         public GameObject characterMenu;
-        // public GameObject helpMenu;
+        public GameObject helpMenu;
+        public GameObject aboutMenu;
+        public GameObject controlMenu;
         // public GameObject settingMenu;
 
         // Selections
@@ -41,7 +43,9 @@ namespace menu {
             mainMenu.SetActive(false);
             optionsMenu.SetActive(false);
             characterMenu.SetActive(false);
-            // helpMenu.SetActive(false);
+            helpMenu.SetActive(false);
+            aboutMenu.SetActive(false);
+            controlMenu.SetActive(false);
 
             // Turn on requested menu
             someMenu.SetActive(true);
@@ -59,9 +63,19 @@ namespace menu {
             SwitchMenu(characterMenu);
         }
 
-        /*public void ShowHelpMenu() {
+        public void ShowHelpMenu() {
             SwitchMenu(helpMenu);
-        }*/
+        }
+
+        public void ShowAboutMenu()
+        {
+            SwitchMenu(aboutMenu);
+        }
+        
+        public void ShowControlMenu()
+        {
+            SwitchMenu(controlMenu);
+        }
 
         public void SelectCityScene() {
             selectedScene = "scene_1";
@@ -73,15 +87,11 @@ namespace menu {
             ShowCharacterMenu(); // Move to character selection after choosing the map
         }
 
-        /*public void SelectSoldier() {
-            selectedCharacter = "Soldier";
-            ShowHelpMenu();
+        public void SelectForestScene()
+        {
+            selectedScene = "scene_forest";
+            ShowCharacterMenu();
         }
-
-        public void SelectSwordsman() {
-            selectedCharacter = "Swordsman";
-            ShowHelpMenu();
-        }*/
 
         public void LoadGame() {
             // Example method to load the game with the selected scene and character
