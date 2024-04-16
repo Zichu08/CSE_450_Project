@@ -1,15 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace scene_1
-{
-    public class Boundary : MonoBehaviour
-    {
+public class Boundary : MonoBehaviour {
         
-        [SerializeField] private player_1_controller player1Controller;
-        [SerializeField] private player_2_controller player2Controller;
+        // [SerializeField] private player_1_controller player1Controller;
+        // [SerializeField] private player_2_controller player2Controller;
+        [SerializeField] private player_movement player_controller;
         [SerializeField] private GameObject gameOverText;
 
         [SerializeField] private GameObject p1WinsText;
@@ -21,14 +16,14 @@ namespace scene_1
         private void OnCollisionEnter2D(Collision2D collision)
         {
             // Check if the collider belongs to the player
-            if(collision.gameObject.GetComponent<player_1_controller>())
+            if(collision.gameObject.name == "player_1")
             {
                 Debug.Log("Player 1 hit the boundary!");
                 GameOver();
                 p2WinsText.SetActive(true);
             }
             
-            if(collision.gameObject.GetComponent<player_2_controller>())
+            if(collision.gameObject.name == "player_2")
             {
                 Debug.Log("Player 2 hit the boundary!");
                 GameOver();
@@ -38,9 +33,14 @@ namespace scene_1
         
         private void GameOver()
         {
-            if (player1Controller != null) player1Controller.DisableMovement();
-            if (player2Controller != null) player2Controller.DisableMovement();
+            if (player_controller != null)
+            {
+                player_controller.disableMovement();
+            }
+            
+
+            // if (player2Controller != null) player2Controller.DisableMovement();
             button.SetActive(true);
         }
     }
-}
+

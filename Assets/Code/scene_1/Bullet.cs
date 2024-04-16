@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         health_manager player = collision.gameObject.GetComponent<health_manager>();
-        scene_1.player_2_controller playerObject = collision.gameObject.GetComponent<scene_1.player_2_controller>();
+        //scene_1.player_2_controller playerObject = collision.gameObject.GetComponent<scene_1.player_2_controller>();
         if (player != null)
         {
             int damageAmount = 20;

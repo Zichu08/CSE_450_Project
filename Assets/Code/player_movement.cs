@@ -1,16 +1,21 @@
 using System;
+using System.Collections;
 using System.Runtime.CompilerServices;
+using scene_1;
 using UnityEngine;
 
 public class player_movement : MonoBehaviour {
     // outlets
     Rigidbody2D rigid_body_2D;
     public GameObject health_bar_canvas;
+    public Transform firePoint;
+    public GameObject bulletPrefab;
     
     // configuration
     public KeyCode jump;
     public KeyCode move_left;
     public KeyCode move_right;
+    public KeyCode shoot;
     
     // state tracking
     public int jumps_left;
@@ -18,6 +23,7 @@ public class player_movement : MonoBehaviour {
     
     //  constants
     private int max_jumps_left = 2;
+    private float speed_power_up_scaler = 18f;
     
     // animator
     private Animator animator;
@@ -46,6 +52,11 @@ public class player_movement : MonoBehaviour {
         }
         if (Input.GetKeyDown(jump)) {
             jumpFunc();
+        }
+
+        if (Input.GetKeyDown(shoot))
+        {
+            shootFunc();
         }
         animator.SetInteger("jumps_left", jumps_left);
         
@@ -83,6 +94,38 @@ public class player_movement : MonoBehaviour {
         }
     }
     
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.GetComponent<Speed_Powerup>()) // Increases player speed for short period
+    //     {
+    //         Destroy(collision.gameObject); // Get rid of physical powerup
+    //         speed_power_up_scaler = 36f;
+    //         StartCoroutine(Speed_Powerup(collision.gameObject.GetComponent<Speed_Powerup>().GetSecondsActive()));
+    //
+    //     }
+    //     else if (collision.gameObject.GetComponent<Jump_Powerup>()) //Adds ability to have an added jump for short period
+    //     {
+    //         Destroy(collision.gameObject); // Get rid of physical powerup
+    //         max_jumps_left = 2;
+    //         StartCoroutine(Jump_Powerup(collision.gameObject.GetComponent<Jump_Powerup>().GetSecondsActive()));
+    //     }
+    //     else if (collision.gameObject.GetComponent<Health_Powerup>()) //Regens 25 health
+    //     {
+    //         Destroy(collision.gameObject); // Get rid of physical powerup
+    //         GetComponent<health_manager>().AddHealth(25);
+    //     }
+    // }
+    //
+    // IEnumerator Speed_Powerup(float duration) {
+    //     yield return new WaitForSeconds(duration);
+    //     speed_power_up_scaler = 18f;
+    // }
+    //
+    // IEnumerator Jump_Powerup(float duration) {
+    //     yield return new WaitForSeconds(duration);
+    //     max_jumps_left = 1;
+    // }
+    
     // methods
     void jumpFunc() {
         if (jumps_left > 0) {
@@ -97,5 +140,19 @@ public class player_movement : MonoBehaviour {
         gameObject.transform.localScale = new_scale;
         sprite_facing_right = !sprite_facing_right;
         health_bar_canvas.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
+    }
+    public void disableMovement() {
+        // disable the script and by extension movement
+        this.enabled = false;
+    }
+    
+    void shootFunc()
+    {
+        GameObject bulletInstance = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        if (!sprite_facing_right) // If we are facing to the left, we want to rotate the bullet 180 degrees
+        {
+            animator.SetTrigger("shoot");
+            bulletInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
     }
 }
