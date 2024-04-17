@@ -19,15 +19,11 @@ public class Boundary : MonoBehaviour {
             if(collision.gameObject.name == "player_1")
             {
                 Debug.Log("Player 1 hit the boundary!");
-                GameOver();
-                p2WinsText.SetActive(true);
             }
             
             if(collision.gameObject.name == "player_2")
             {
                 Debug.Log("Player 2 hit the boundary!");
-                GameOver();
-                p1WinsText.SetActive(true);
             }
         }
         
