@@ -62,7 +62,7 @@ public class health_manager : MonoBehaviour {
             // {
             //     alive = true;
             // }
-            SetHealth(200);
+            // SetHealth(200);
         }
 
         /*
@@ -103,6 +103,7 @@ public class health_manager : MonoBehaviour {
                 // Update the health bar if health is still above 0
                 animator.SetTrigger("hurt");
                 health_bar.set_health(health);
+                Debug.Log(health);
             }
         }
 

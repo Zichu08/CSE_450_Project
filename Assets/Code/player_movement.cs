@@ -142,8 +142,13 @@ public class player_movement : MonoBehaviour {
 
     void flipSpriteDirection()
     {
-        spriteRenderer.flipX = !spriteRenderer.flipX;
+        // spriteRenderer.flipX = !spriteRenderer.flipX;
+        // sprite_facing_right = !sprite_facing_right;
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
         sprite_facing_right = !sprite_facing_right;
+        print("Player is facing right: " + sprite_facing_right);
     }
 
 

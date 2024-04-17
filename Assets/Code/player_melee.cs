@@ -64,7 +64,9 @@ public class player_melee : MonoBehaviour {
     }
     
     // methods
-    void attack1() {
+    void attack1()
+    {
+        Debug.Log("attack _ ");
         attacking = true;
         character.enabled = false;
         character.enabled = true;
