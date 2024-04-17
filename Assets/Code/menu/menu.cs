@@ -4,10 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace menu {
+
     public class menu : MonoBehaviour
     {
         public static menu instance;
+
+        private void Start()
+        {
+            // pauseMenu.SetActive(false);
+        }
 
         // Menus
         public GameObject mainMenu;
@@ -18,6 +23,9 @@ namespace menu {
         public GameObject controlMenu;
         // public GameObject settingMenu;
 
+        public GameObject pauseMenu;
+        
+
         // Selections
         private string selectedScene;
         private string selectedCharacter;
@@ -25,6 +33,11 @@ namespace menu {
         void Awake() {
             instance = this;
             Show();
+        }
+
+        public void ShowPauseMenu()
+        {
+            SwitchMenu(pauseMenu);
         }
 
 
@@ -121,4 +134,4 @@ namespace menu {
             SceneManager.LoadScene(selectedScene);
         }
     }
-}
+

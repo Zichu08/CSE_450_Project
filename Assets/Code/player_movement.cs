@@ -3,19 +3,24 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using scene_1;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player_movement : MonoBehaviour {
     // outlets
     Rigidbody2D rigid_body_2D;
+    public static player_movement instance;
     public GameObject health_bar_canvas;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public menu menu_controller;
+    public bool isPaused;
     
     // configuration
     public KeyCode jump;
     public KeyCode move_left;
     public KeyCode move_right;
     public KeyCode shoot;
+    
     
     // state tracking
     public int jumps_left;
@@ -39,8 +44,17 @@ public class player_movement : MonoBehaviour {
         health_bar_canvas = transform.GetChild(3).gameObject;
         jumps_left = 2;
     }
+    
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Update() {
+        if (isPaused)
+        {
+            return;
+        }
         if (Input.GetKey(move_left)) {
             rigid_body_2D.AddForce(Vector2.left * speed_power_up_scaler * Time.deltaTime , ForceMode2D.Impulse);
             if (sprite_facing_right) {
@@ -62,6 +76,15 @@ public class player_movement : MonoBehaviour {
         {
             shootFunc();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pause.instance.Show();
+        }
+
+  
+
+        
         animator.SetInteger("jumps_left", jumps_left);
         
     }

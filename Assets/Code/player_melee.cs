@@ -13,7 +13,7 @@ public class player_melee : MonoBehaviour {
     // state tracking
     private bool attacking;
     private float timer;
-    private bool animation_finished = true;
+    public bool animation_finished = true;
     
     // configuration
     public KeyCode attack_1;
@@ -63,8 +63,7 @@ public class player_melee : MonoBehaviour {
     }
     
     // methods
-    void attack1()
-    {
+    void attack1() {
         Debug.Log("attack _ ");
         attacking = true;
         character.enabled = false;
