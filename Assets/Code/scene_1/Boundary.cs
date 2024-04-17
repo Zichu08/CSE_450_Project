@@ -1,4 +1,5 @@
 using System;
+using scene_1;
 using UnityEngine;
 
 public class Boundary : MonoBehaviour {
@@ -33,12 +34,14 @@ public class Boundary : MonoBehaviour {
             }
         }
         
-        private void GameOver()
+        public void GameOver()
         {
             if (player_controller != null)
             {
                 player_controller.disableMovement();
             }
+            
+            
             
 
             // if (player2Controller != null) player2Controller.DisableMovement();

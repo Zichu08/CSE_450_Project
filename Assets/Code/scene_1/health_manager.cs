@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class health_manager : MonoBehaviour { 
@@ -89,15 +90,15 @@ public class health_manager : MonoBehaviour {
                 RenderHearts(); // Render hearts
                 health_bar.set_health(0); // Set the health bar to zero
                 
-                if (livesRemaining > 0)
-                {
+                if (livesRemaining > 0) {
                 // Reset position and health for the next life
-                Respawn(); 
+                    Respawn(); 
                 }
                 else
                 {
                     // No more lives left, the player is now dead
                     alive = false;
+                    Debug.Log(name);
                 }
             }
             else
@@ -191,7 +192,6 @@ public class health_manager : MonoBehaviour {
 
     private void Respawn()
     {
-
         transform.position = startPosition; // Reset the player's position
         SetHealth(200); // Reset health to full
     }

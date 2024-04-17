@@ -67,15 +67,17 @@ namespace scene_1
             if (p1Lives <= 0)
             {
                 Debug.Log("P1 has no lives remaining");
+                p2WinsText.SetActive(true);
                 GameOver();
-                p1WinsText.SetActive(true);
+                
 
             }
             else if (p2Lives <= 0)
             {
                 Debug.Log("P2 has no lives remaining");
+                p1WinsText.SetActive(true);
                 GameOver();
-                p2WinsText.SetActive(true);
+                
             }
         }
         
