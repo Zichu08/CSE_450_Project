@@ -161,7 +161,7 @@ public class health_manager : MonoBehaviour {
             }
         }
 
-        public void enable_invincible()
+        /* public void enable_invincible()
         {
             character.gravityScale = 0;
             character_collider.enabled = false;
@@ -173,7 +173,7 @@ public class health_manager : MonoBehaviour {
             
             character_collider.enabled = true;
             character.gravityScale = 1.5f;
-        }
+        }*/
         
         
     }
