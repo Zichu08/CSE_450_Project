@@ -14,6 +14,9 @@ namespace menu {
         public GameObject optionsMenu;
         public GameObject characterMenu;
         // public GameObject helpMenu;
+        // public GameObject aboutMenu;
+        // public GameObject controlMenu;
+        // public GameObject helpMenu;
         // public GameObject settingMenu;
 
         // Selections
@@ -42,6 +45,8 @@ namespace menu {
             optionsMenu.SetActive(false);
             characterMenu.SetActive(false);
             // helpMenu.SetActive(false);
+            // aboutMenu.SetActive(false);
+            // controlMenu.SetActive(false);
 
             // Turn on requested menu
             someMenu.SetActive(true);
@@ -59,9 +64,19 @@ namespace menu {
             SwitchMenu(characterMenu);
         }
 
-        /*public void ShowHelpMenu() {
-            SwitchMenu(helpMenu);
-        }*/
+        // public void ShowHelpMenu() {
+        //     SwitchMenu(helpMenu);
+        // }
+        //
+        // public void ShowAboutMenu()
+        // {
+        //     SwitchMenu(aboutMenu);
+        // }
+        //
+        // public void ShowControlMenu()
+        // {
+        //     SwitchMenu(controlMenu);
+        // }
 
         public void SelectCityScene() {
             selectedScene = "scene_1";
@@ -71,6 +86,24 @@ namespace menu {
         public void SelectBeachScene() {
             selectedScene = "scene_2";
             ShowCharacterMenu(); // Move to character selection after choosing the map
+        }
+        
+        public void SelectForestScene()
+        {
+            selectedScene = "scene_forest";
+            ShowCharacterMenu();
+        }
+        
+        public void SelectLavaScene()
+        {
+            selectedScene = "scene_lava";
+            ShowCharacterMenu();
+        }
+        
+        public void SelectSpaceScene()
+        {
+            selectedScene = "scene_space";
+            ShowCharacterMenu();
         }
 
         /*public void SelectSoldier() {
