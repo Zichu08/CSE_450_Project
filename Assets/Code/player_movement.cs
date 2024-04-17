@@ -24,12 +24,16 @@ public class player_movement : MonoBehaviour {
     //  constants
     private int max_jumps_left = 2;
     private float speed_power_up_scaler = 18f;
-    
+
+    // character sprite
+    private SpriteRenderer spriteRenderer;
+
     // animator
     private Animator animator;
     
     // event functions
     void Start() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rigid_body_2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         health_bar_canvas = transform.GetChild(3).gameObject;
@@ -66,7 +70,7 @@ public class player_movement : MonoBehaviour {
         // check that we collided with Ground layer
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
             // check what is directly below our character's feet
-            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1f);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1.2f);
             
             // we might have multiple things below our character's feet
             for (int i = 0; i < hits.Length; i++) {
@@ -96,21 +100,22 @@ public class player_movement : MonoBehaviour {
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Speed_Powerup>()) // Increases player speed for short period
+        if (collision.gameObject.GetComponent<scene_2.SpeedPowerup>()) // Increases player speed for short period
         {
             Destroy(collision.gameObject); // Get rid of physical powerup
             speed_power_up_scaler = 36f;
             StartCoroutine(Speed_Powerup(collision.gameObject.GetComponent<Speed_Powerup>().GetSecondsActive()));
     
         }
-        else if (collision.gameObject.GetComponent<Jump_Powerup>()) //Adds ability to have an added jump for short period
+        //else if (collision.gameObject.GetComponent<scene_2.JumpPowerup>()) //Adds ability to have an added jump for short period
+        //{
+        //    Destroy(collision.gameObject); // Get rid of physical powerup
+        //    max_jumps_left = 2;
+        //    StartCoroutine(Jump_Powerup(collision.gameObject.GetComponent<Jump_Powerup>().GetSecondsActive()));
+        //}
+        else if (collision.gameObject.GetComponent<scene_2.HealthPowerup>()) //Regens 25 health
         {
-            Destroy(collision.gameObject); // Get rid of physical powerup
-            max_jumps_left = 2;
-            StartCoroutine(Jump_Powerup(collision.gameObject.GetComponent<Jump_Powerup>().GetSecondsActive()));
-        }
-        else if (collision.gameObject.GetComponent<Health_Powerup>()) //Regens 25 health
-        {
+            Debug.Log("running");
             Destroy(collision.gameObject); // Get rid of physical powerup
             GetComponent<health_manager>().AddHealth(25);
         }
@@ -133,14 +138,15 @@ public class player_movement : MonoBehaviour {
             rigid_body_2D.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
         }
     }
-    
-    void flipSpriteDirection() {
-        Vector3 new_scale = gameObject.transform.localScale;
-        new_scale.x *= -1;
-        gameObject.transform.localScale = new_scale;
+
+
+    void flipSpriteDirection()
+    {
+        spriteRenderer.flipX = !spriteRenderer.flipX;
         sprite_facing_right = !sprite_facing_right;
-        health_bar_canvas.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
     }
+
+
     public void disableMovement() {
         // disable the script and by extension movement
         this.enabled = false;
