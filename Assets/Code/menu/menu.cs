@@ -13,10 +13,9 @@ namespace menu {
         public GameObject mainMenu;
         public GameObject optionsMenu;
         public GameObject characterMenu;
-        // public GameObject helpMenu;
-        // public GameObject aboutMenu;
-        // public GameObject controlMenu;
-        // public GameObject helpMenu;
+        public GameObject helpMenu;
+        public GameObject aboutMenu;
+        public GameObject controlMenu;
         // public GameObject settingMenu;
 
         // Selections
@@ -44,9 +43,9 @@ namespace menu {
             mainMenu.SetActive(false);
             optionsMenu.SetActive(false);
             characterMenu.SetActive(false);
-            // helpMenu.SetActive(false);
-            // aboutMenu.SetActive(false);
-            // controlMenu.SetActive(false);
+            helpMenu.SetActive(false);
+            aboutMenu.SetActive(false);
+            controlMenu.SetActive(false);
 
             // Turn on requested menu
             someMenu.SetActive(true);
@@ -64,19 +63,19 @@ namespace menu {
             SwitchMenu(characterMenu);
         }
 
-        // public void ShowHelpMenu() {
-        //     SwitchMenu(helpMenu);
-        // }
-        //
-        // public void ShowAboutMenu()
-        // {
-        //     SwitchMenu(aboutMenu);
-        // }
-        //
-        // public void ShowControlMenu()
-        // {
-        //     SwitchMenu(controlMenu);
-        // }
+        public void ShowHelpMenu() {
+            SwitchMenu(helpMenu);
+        }
+        
+        public void ShowAboutMenu()
+        {
+            SwitchMenu(aboutMenu);
+        }
+        
+        public void ShowControlMenu()
+        {
+            SwitchMenu(controlMenu);
+        }
 
         public void SelectCityScene() {
             selectedScene = "scene_1";
