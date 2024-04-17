@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scene_2.unity
     guid: 43b68b300b8094b77b10e7214d1635b2
+  - enabled: 1
+    path: Assets/Scenes/scene_forest.unity
+    guid: 933af84819c36436d988c1ce9a4ec512
+  - enabled: 1
+    path: Assets/Scenes/scene_lava.unity
+    guid: 6cc169b46e2e04edfac9ffc06878688e
+  - enabled: 1
+    path: Assets/Scenes/scene_space.unity
+    guid: 4bd9777c3146741bb8d92f553abefe54
   m_configObjects: {}
