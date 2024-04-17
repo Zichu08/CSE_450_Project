@@ -4423,6 +4423,22 @@ PrefabInstance:
       propertyPath: heartsContainer
       value: 
       objectReference: {fileID: 1724256676}
+    - target: {fileID: 5342198084895209822, guid: 73648c9ea3db8c74d96c7620c55dd132, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8147366
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342198084895209822, guid: 73648c9ea3db8c74d96c7620c55dd132, type: 3}
+      propertyPath: m_Size.y
+      value: 2.3541427
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342198084895209822, guid: 73648c9ea3db8c74d96c7620c55dd132, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.20422396
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342198084895209822, guid: 73648c9ea3db8c74d96c7620c55dd132, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.038639642
+      objectReference: {fileID: 0}
     - target: {fileID: 8480110682086251612, guid: 73648c9ea3db8c74d96c7620c55dd132, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

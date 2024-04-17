@@ -15,8 +15,7 @@ namespace scene_2
         }
 
         // Update is called once per frame
-        void Update()
-        {
+        void Update() {
             transform.position = new Vector2(18.02f, 1f + Mathf.Sin(Time.realtimeSinceStartup) * 0.25f);
         }
 

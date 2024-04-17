@@ -66,7 +66,7 @@ public class player_movement : MonoBehaviour {
         // check that we collided with Ground layer
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
             // check what is directly below our character's feet
-            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1f);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1.2f);
             
             // we might have multiple things below our character's feet
             for (int i = 0; i < hits.Length; i++) {
@@ -111,6 +111,7 @@ public class player_movement : MonoBehaviour {
         }
         else if (collision.gameObject.GetComponent<Health_Powerup>()) //Regens 25 health
         {
+            Debug.Log("running");
             Destroy(collision.gameObject); // Get rid of physical powerup
             GetComponent<health_manager>().AddHealth(25);
         }
