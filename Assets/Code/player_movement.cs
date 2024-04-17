@@ -144,11 +144,14 @@ public class player_movement : MonoBehaviour {
     {
         // spriteRenderer.flipX = !spriteRenderer.flipX;
         // sprite_facing_right = !sprite_facing_right;
+        
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         sprite_facing_right = !sprite_facing_right;
         print("Player is facing right: " + sprite_facing_right);
+        float tmp = -1 * health_bar_canvas.transform.localScale.x ;
+        health_bar_canvas.transform.localScale = new Vector3(tmp, 0.005f, 0.005f);
     }
 
 
