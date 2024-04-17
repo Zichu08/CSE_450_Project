@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Boundary : MonoBehaviour {
@@ -11,8 +12,13 @@ public class Boundary : MonoBehaviour {
         [SerializeField] private GameObject p2WinsText;
         
         public GameObject button;
+        public GameObject button2;
 
-        
+        private void Start()
+        {
+            
+        }
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             // Check if the collider belongs to the player
@@ -36,7 +42,9 @@ public class Boundary : MonoBehaviour {
             
 
             // if (player2Controller != null) player2Controller.DisableMovement();
+            button2.SetActive(true);
             button.SetActive(true);
+
         }
     }
 

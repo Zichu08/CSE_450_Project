@@ -11,8 +11,8 @@ namespace scene_1
     {
         [SerializeField] TextMeshProUGUI timerText;
         [SerializeField] private float remainingTime;
-        [SerializeField] private player_1_controller player1Controller;
-        [SerializeField] private player_2_controller player2Controller;
+        [SerializeField] private player_movement player1Controller;
+        [SerializeField] private player_movement player2Controller;
         [SerializeField] private GameObject gameOverText;
 
         [SerializeField] private GameObject p1WinsText;
@@ -34,8 +34,9 @@ namespace scene_1
             p1WinsText.SetActive(false);
             p2WinsText.SetActive(false);
 
+
             // p1 = GameObject.Find("player_1");
-            // p2 = GameObject.Find("player_2");
+            // p2 = GameObject.Find("player_2");  
             p1HM = GameObject.Find("player_1").GetComponent<health_manager>();
             p2HM = GameObject.Find("player_2").GetComponent<health_manager>();
             button = GameObject.Find("button");
@@ -67,15 +68,14 @@ namespace scene_1
             {
                 Debug.Log("P1 has no lives remaining");
                 GameOver();
-                p2WinsText.SetActive(true);
-                button2.SetActive(false);
+                p1WinsText.SetActive(true);
+
             }
             else if (p2Lives <= 0)
             {
                 Debug.Log("P2 has no lives remaining");
                 GameOver();
-                p1WinsText.SetActive(true);
-                button2.SetActive(false);
+                p2WinsText.SetActive(true);
             }
         }
         
@@ -89,10 +89,11 @@ namespace scene_1
         
         private void GameOver()
         {
-            if (player1Controller != null) player1Controller.DisableMovement();
-            if (player2Controller != null) player2Controller.DisableMovement();
+            if (player1Controller != null) player1Controller.disableMovement();
+            if (player2Controller != null) player2Controller.disableMovement();
            // gameOverText.SetActive(true);
            button.SetActive(true);
+           button2.SetActive(true);
         }
 
     }
