@@ -5,29 +5,32 @@ public class health_manager : MonoBehaviour {
     public GameObject heartPrefab;
     public Transform heartsContainer; // Reference to the Canvas transform
 
-        // Data members
-        public int health = 199;
-        public bool alive = true;
-        public health_bar_controller health_bar;
-        public int livesRemaining;
-        public int maxHearts;
+    // Data members
+    public int health = 199;
+    public bool alive = true;
+    public health_bar_controller health_bar;
+    public int livesRemaining;
+    public int maxHearts;
+    private Vector3 startPosition;
 
-        private CapsuleCollider2D character_collider;
-        private Animator animator;
-        private Rigidbody2D character;
 
-        /*
-         * Set health points to a specified number
-         * Parameters - healthPoints: A single unit of health
-         */
-        public void SetHealth(int healthPoints)
-        {
-            health = healthPoints;
-            health_bar.set_max_health(200);
+    private CapsuleCollider2D character_collider;
+    private Animator animator;
+    private Rigidbody2D character;
+
+    /*
+        * Set health points to a specified number
+        * Parameters - healthPoints: A single unit of health
+        */
+    public void SetHealth(int healthPoints)
+    {
+        health = healthPoints;
+        health_bar.set_max_health(200);
             
-        }
+    }
 
         private void Start() {
+            startPosition = this.transform.position; // Save the initial start position
             livesRemaining = 3;
             SetHealth(200);
             RenderHearts();
@@ -85,8 +88,8 @@ public class health_manager : MonoBehaviour {
                 
                 if (livesRemaining > 0)
                 {
-                    // Reset health for the next life
-                    SetHealth(200);
+                // Reset position and health for the next life
+                Respawn(); 
                 }
                 else
                 {
@@ -160,19 +163,48 @@ public class health_manager : MonoBehaviour {
             }
         }
 
-        public void enable_invincible()
+    // Respawn funcitonality
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Check if the player has collided with a boundary
+        if (other.CompareTag("Boundary"))
         {
-            character.gravityScale = 0;
-            character_collider.enabled = false;
-            
+            HandleBoundaryCollision();
         }
+    }
 
-        public void disable_invincible()
+    private void HandleBoundaryCollision()
+    {
+        if (livesRemaining > 0)
         {
-            
-            character_collider.enabled = true;
-            character.gravityScale = 1.5f;
+            RemoveHealth(health); // This ensures health goes to zero and triggers respawning
         }
+        else
+        {
+            Respawn();
+        }
+    }
+
+    private void Respawn()
+    {
+
+        transform.position = startPosition; // Reset the player's position
+        SetHealth(200); // Reset health to full
+    }
+
+    //   public void enable_invincible()
+    //    {
+    //        character.gravityScale = 0;
+    //        character_collider.enabled = false;
+            
+    //    }
+
+    //    public void disable_invincible()
+    //    {
+            
+    //        character_collider.enabled = true;
+    //        character.gravityScale = 1.5f;
+    //    }
         
         
     }

@@ -24,12 +24,16 @@ public class player_movement : MonoBehaviour {
     //  constants
     private int max_jumps_left = 2;
     private float speed_power_up_scaler = 18f;
-    
+
+    // character sprite
+    private SpriteRenderer spriteRenderer;
+
     // animator
     private Animator animator;
     
     // event functions
     void Start() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rigid_body_2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         health_bar_canvas = transform.GetChild(3).gameObject;
@@ -133,14 +137,15 @@ public class player_movement : MonoBehaviour {
             rigid_body_2D.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
         }
     }
-    
-    void flipSpriteDirection() {
-        Vector3 new_scale = gameObject.transform.localScale;
-        new_scale.x *= -1;
-        gameObject.transform.localScale = new_scale;
+
+
+    void flipSpriteDirection()
+    {
+        spriteRenderer.flipX = !spriteRenderer.flipX;
         sprite_facing_right = !sprite_facing_right;
-        health_bar_canvas.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
     }
+
+
     public void disableMovement() {
         // disable the script and by extension movement
         this.enabled = false;
