@@ -31,7 +31,6 @@ public class player_melee : MonoBehaviour {
         attack_area_2.SetActive(false);
         attack_area_3.SetActive(false);
         character = GetComponent<CapsuleCollider2D>();
-        Debug.Log(this.name);
     }
 
     private void Update() {
