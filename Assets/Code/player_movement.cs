@@ -96,20 +96,20 @@ public class player_movement : MonoBehaviour {
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Speed_Powerup>()) // Increases player speed for short period
+        if (collision.gameObject.GetComponent<scene_2.SpeedPowerup>()) // Increases player speed for short period
         {
             Destroy(collision.gameObject); // Get rid of physical powerup
             speed_power_up_scaler = 36f;
             StartCoroutine(Speed_Powerup(collision.gameObject.GetComponent<Speed_Powerup>().GetSecondsActive()));
     
         }
-        else if (collision.gameObject.GetComponent<Jump_Powerup>()) //Adds ability to have an added jump for short period
-        {
-            Destroy(collision.gameObject); // Get rid of physical powerup
-            max_jumps_left = 2;
-            StartCoroutine(Jump_Powerup(collision.gameObject.GetComponent<Jump_Powerup>().GetSecondsActive()));
-        }
-        else if (collision.gameObject.GetComponent<Health_Powerup>()) //Regens 25 health
+        //else if (collision.gameObject.GetComponent<scene_2.JumpPowerup>()) //Adds ability to have an added jump for short period
+        //{
+        //    Destroy(collision.gameObject); // Get rid of physical powerup
+        //    max_jumps_left = 2;
+        //    StartCoroutine(Jump_Powerup(collision.gameObject.GetComponent<Jump_Powerup>().GetSecondsActive()));
+        //}
+        else if (collision.gameObject.GetComponent<scene_2.HealthPowerup>()) //Regens 25 health
         {
             Destroy(collision.gameObject); // Get rid of physical powerup
             GetComponent<health_manager>().AddHealth(25);
