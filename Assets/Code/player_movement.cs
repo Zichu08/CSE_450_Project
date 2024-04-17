@@ -42,14 +42,14 @@ public class player_movement : MonoBehaviour {
 
     void Update() {
         if (Input.GetKey(move_left)) {
-            rigid_body_2D.AddForce(Vector2.left * 18f * Time.deltaTime, ForceMode2D.Impulse);
+            rigid_body_2D.AddForce(Vector2.left * speed_power_up_scaler * Time.deltaTime , ForceMode2D.Impulse);
             if (sprite_facing_right) {
                 flipSpriteDirection();
             }
         }
         
         if (Input.GetKey(move_right)) {
-            rigid_body_2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
+            rigid_body_2D.AddForce(Vector2.right * speed_power_up_scaler * Time.deltaTime, ForceMode2D.Impulse);
             if (!sprite_facing_right) {
                 flipSpriteDirection();
             }
@@ -104,7 +104,7 @@ public class player_movement : MonoBehaviour {
         {
             Destroy(collision.gameObject); // Get rid of physical powerup
             speed_power_up_scaler = 36f;
-            StartCoroutine(Speed_Powerup(collision.gameObject.GetComponent<Speed_Powerup>().GetSecondsActive()));
+            StartCoroutine(Speed_Powerup(5));
     
         }
         //else if (collision.gameObject.GetComponent<scene_2.JumpPowerup>()) //Adds ability to have an added jump for short period
@@ -115,7 +115,7 @@ public class player_movement : MonoBehaviour {
         //}
         else if (collision.gameObject.GetComponent<scene_2.HealthPowerup>()) //Regens 25 health
         {
-            Debug.Log("running");
+            Debug.Log("gain health");
             Destroy(collision.gameObject); // Get rid of physical powerup
             GetComponent<health_manager>().AddHealth(25);
         }

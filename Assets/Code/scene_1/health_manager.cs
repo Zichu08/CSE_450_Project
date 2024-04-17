@@ -47,15 +47,17 @@ public class health_manager : MonoBehaviour {
          */
         public void AddHealth(int healthPoints)
         {
-            // int healthSum = health + healthPoints;
-            // if (healthSum < 100)
-            // {
-            //     health = healthSum;
-            // }
-            // else
-            // {
-            //     health = 100;
-            // }
+            int healthSum = health + healthPoints;
+            if (healthSum < 200)
+            {
+                health = healthSum;
+                SetHealth(health);
+            }
+            else
+            {
+                health = 200;
+                SetHealth(health);
+            }
             //
             // // If for some reason the player is gaining health after being dead, alive is reset as true
             // if (!alive)
